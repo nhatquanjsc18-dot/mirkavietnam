@@ -78,18 +78,71 @@ a{color:inherit;text-decoration:none;}
 /* Header */
 .site-header{
   position:sticky;top:0;z-index:200;
-  background:#fff;
-  border-bottom:1px solid var(--border);
+  background:var(--black);
 }
 .header-inner{
   display:flex;align-items:center;justify-content:space-between;
   height:72px;
 }
 .logo-img{height:26px;width:auto;}
-.main-nav{display:flex;gap:30px;}
-.main-nav a{font-weight:600;font-size:0.95rem;}
-.main-nav a:hover{color:#b89b00;}
+.main-nav{display:flex;gap:6px;align-items:stretch;align-self:stretch;}
+.main-nav a{font-weight:600;font-size:0.92rem;color:#fff;}
+.main-nav > a{display:flex;align-items:center;height:100%;padding:0 6px;}
+.main-nav a:hover{color:var(--yellow);}
+.main-nav a.active-link{color:var(--yellow);}
 .header-actions{display:flex;gap:6px;align-items:center;}
+.header-actions .icon-btn{color:#fff;}
+
+/* Nav item với mega-menu / dropdown */
+.nav-item{display:flex;align-items:center;}
+/* Nav-item chứa dropdown hẹp (Ngành nghề) cần làm điểm neo định vị riêng.
+   Nav-item chứa mega-menu (Sản phẩm) KHÔNG được làm điểm neo — để mega-menu
+   trồi lên bám theo .site-header (positioned) và trải full-width, thay vì
+   bị bó hẹp theo đúng bề rộng chữ "Sản phẩm". */
+.nav-item:has(.dropdown-menu){position:relative;}
+.nav-item > a{display:flex;align-items:center;gap:5px;height:100%;padding:0 6px;}
+.nav-chev{width:9px;height:9px;flex-shrink:0;transition:transform .15s ease;}
+.nav-item:hover .nav-chev,.nav-item:focus-within .nav-chev{transform:rotate(180deg);}
+
+.mega-menu{
+  display:none;position:absolute;top:100%;left:0;right:0;
+  background:#fff;border-top:3px solid var(--yellow);
+  box-shadow:0 16px 32px rgba(0,0,0,0.18);
+  padding:32px 0;z-index:300;
+}
+.nav-item:hover .mega-menu,.nav-item:focus-within .mega-menu{display:block;}
+.mega-menu-grid{
+  max-width:1240px;margin:0 auto;padding:0 24px;
+  display:grid;grid-template-columns:repeat(6,1fr);gap:24px;
+}
+.mega-col h4{
+  font-size:0.78rem;text-transform:uppercase;letter-spacing:0.3px;
+  color:var(--ink);font-weight:800;margin-bottom:12px;
+  padding-bottom:10px;border-bottom:2px solid var(--border);
+}
+.mega-col h4 a{color:inherit;}
+.mega-col h4 a:hover{color:#b89b00;}
+.mega-col a{display:block;padding:6px 0;font-size:0.85rem;color:var(--muted);font-weight:500;}
+.mega-col a:hover{color:#b89b00;}
+
+.dropdown-menu{
+  display:none;position:absolute;top:100%;left:0;min-width:260px;
+  background:#fff;border-top:3px solid var(--yellow);
+  box-shadow:0 16px 32px rgba(0,0,0,0.18);
+  padding:10px 0;z-index:300;
+}
+.nav-item:hover .dropdown-menu,.nav-item:focus-within .dropdown-menu{display:block;}
+.dropdown-menu a{display:block;padding:10px 20px;font-size:0.88rem;color:var(--ink);font-weight:500;}
+.dropdown-menu a:hover{background:var(--bg-soft);color:#b89b00;}
+
+/* Top bar: thương hiệu trái, liên hệ nhanh phải */
+.top-bar-inner{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;}
+.top-bar-contact{display:flex;align-items:center;gap:22px;flex-wrap:wrap;}
+.top-bar-contact a,.top-bar-contact span{
+  font-size:0.75rem;color:var(--muted);display:inline-flex;align-items:center;gap:5px;white-space:nowrap;
+}
+.top-bar-contact a:hover{color:#b89b00;}
+.top-bar-contact svg{width:13px;height:13px;flex-shrink:0;}
 
 .search-bar{
   max-height:0;overflow:hidden;
@@ -304,7 +357,6 @@ a{color:inherit;text-decoration:none;}
 }
 
 /* Nav active state */
-.main-nav a.active-link{color:#b89b00;}
 .btn-outline-dark{border-color:var(--ink);color:var(--ink);background:transparent;}
 .btn-outline-dark:hover{background:var(--ink);color:#fff;}
 

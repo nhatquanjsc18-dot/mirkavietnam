@@ -70,8 +70,13 @@ if ( is_front_page() ) {
 
 <!-- TOP BAR -->
 <div class="top-bar">
-  <div class="container">
-    <span>Nhà phân phối chính hãng Mirka tại Việt Nam</span>
+  <div class="container top-bar-inner">
+    <span class="top-bar-brand">Nhà phân phối chính hãng Mirka tại Việt Nam</span>
+    <div class="top-bar-contact">
+      <a href="mailto:hoai@nhatquan.vn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m22 7-10 6L2 7"></path></svg> hoai@nhatquan.vn</a>
+      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 3"></path></svg> T2 - T6 08:00 - 17:00 · T7 08:00 - 16:00</span>
+      <a href="tel:0907811767"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .3 2 .7 2.9a2 2 0 0 1-.4 2.1L8 10a16 16 0 0 0 6 6l1.3-1.4a2 2 0 0 1 2.1-.4c.9.4 1.9.6 2.9.7a2 2 0 0 1 1.7 2.1z"></path></svg> 0907 811 767</a>
+    </div>
   </div>
 </div>
 
@@ -82,10 +87,59 @@ if ( is_front_page() ) {
       <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/site/mirka-logo.svg' ); ?>" alt="Mirka" class="logo-img">
     </a>
     <nav class="main-nav">
-      <a href="<?php echo mirka_url( 'san-pham.html' ); ?>"<?php echo $is_san_pham ? ' class="active-link"' : ''; ?>>Sản phẩm</a>
+      <a href="<?php echo mirka_url( 'index.html#about' ); ?>">Giới thiệu</a>
+      <div class="nav-item">
+        <a href="<?php echo mirka_url( 'san-pham.html' ); ?>"<?php echo $is_san_pham ? ' class="active-link"' : ''; ?>>Sản phẩm <svg class="nav-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg></a>
+        <div class="mega-menu">
+          <div class="mega-menu-grid">
+            <div class="mega-col">
+              <h4><a href="<?php echo mirka_url( 'san-pham.html?cat=dien' ); ?>">Máy chà nhám điện</a></h4>
+              <a href="<?php echo mirka_url( 'san-pham.html?cat=dien&sub=ly-tam' ); ?>">Máy chà nhám quỹ đạo</a>
+              <a href="<?php echo mirka_url( 'san-pham.html?cat=dien&sub=tuong' ); ?>">Máy chà tường</a>
+            </div>
+            <div class="mega-col">
+              <h4><a href="<?php echo mirka_url( 'san-pham.html?cat=khinen' ); ?>">Máy chà nhám khí nén</a></h4>
+              <a href="<?php echo mirka_url( 'san-pham.html?cat=khinen&sub=khi-nen-ros' ); ?>">Dòng ROS</a>
+              <a href="<?php echo mirka_url( 'san-pham.html?cat=khinen&sub=khi-nen-pros' ); ?>">Dòng PROS</a>
+            </div>
+            <div class="mega-col">
+              <h4><a href="<?php echo mirka_url( 'san-pham.html?cat=pin' ); ?>">Máy chà nhám dùng pin</a></h4>
+              <a href="<?php echo mirka_url( 'san-pham.html?cat=pin&sub=chanham-pin' ); ?>">Máy chà nhám quỹ đạo pin</a>
+              <a href="<?php echo mirka_url( 'san-pham.html?cat=pin&sub=may-mai-pin' ); ?>">Máy mài &amp; chà băng pin</a>
+            </div>
+            <div class="mega-col">
+              <h4><a href="<?php echo mirka_url( 'san-pham.html?cat=robot' ); ?>">Robot &amp; Tự động hóa</a></h4>
+              <a href="<?php echo mirka_url( 'san-pham.html?cat=robot&sub=dau-robot' ); ?>">Đầu chà nhám robot</a>
+              <a href="<?php echo mirka_url( 'san-pham.html?cat=robot&sub=kit-ur' ); ?>">Bộ lắp đặt UR/ABB</a>
+            </div>
+            <div class="mega-col">
+              <h4><a href="<?php echo mirka_url( 'san-pham.html?cat=mai' ); ?>">Vật liệu mài</a></h4>
+              <a href="<?php echo mirka_url( 'san-pham.html?cat=mai&sub=luoi-nham' ); ?>">Giấy nhám lưới Abranet</a>
+              <a href="<?php echo mirka_url( 'san-pham.html?cat=mai&sub=da-nang' ); ?>">Vật liệu mài đa năng</a>
+            </div>
+            <div class="mega-col">
+              <h4><a href="<?php echo mirka_url( 'san-pham.html?cat=danhbong' ); ?>">Đánh bóng</a></h4>
+              <a href="<?php echo mirka_url( 'san-pham.html?cat=danhbong&sub=may-danh-bong' ); ?>">Máy đánh bóng điện</a>
+              <a href="<?php echo mirka_url( 'san-pham.html?cat=danhbong&sub=polarshine' ); ?>">Hợp chất Polarshine</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="nav-item">
+        <a href="<?php echo mirka_url( 'index.html#industries' ); ?>">Ngành nghề <svg class="nav-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg></a>
+        <div class="dropdown-menu">
+          <a href="<?php echo mirka_url( 'nganh-va-cham-oto.html' ); ?>">Sửa chữa va chạm ô tô</a>
+          <a href="<?php echo mirka_url( 'nganh-go-noi-that.html' ); ?>">Gỗ &amp; Nội thất</a>
+          <a href="<?php echo mirka_url( 'nganh-xay-dung.html' ); ?>">Xây dựng, Cải tạo &amp; Hoàn thiện</a>
+          <a href="<?php echo mirka_url( 'nganh-hang-hai.html' ); ?>">Đóng tàu &amp; Hàng hải</a>
+          <a href="<?php echo mirka_url( 'nganh-cong-nghiep-oto.html' ); ?>">Ngành công nghiệp ô tô</a>
+          <a href="<?php echo mirka_url( 'nganh-composite.html' ); ?>">Vật liệu Composite</a>
+          <a href="<?php echo mirka_url( 'nganh-dung-cu.html' ); ?>">Sản xuất dụng cụ</a>
+          <a href="<?php echo mirka_url( 'nganh-powertrain.html' ); ?>">Truyền động (Powertrain)</a>
+        </div>
+      </div>
       <a href="<?php echo mirka_url( 'bai-viet.html' ); ?>"<?php echo $is_bai_viet ? ' class="active-link"' : ''; ?>>Kiến thức</a>
-      <a href="<?php echo mirka_url( 'index.html#industries' ); ?>">Ngành nghề</a>
-      <a href="<?php echo mirka_url( 'index.html#about' ); ?>">Về chúng tôi</a>
+      <a href="<?php echo mirka_url( 'lien-he.html' ); ?>"<?php echo $is_lien_he ? ' class="active-link"' : ''; ?>>Liên hệ</a>
     </nav>
     <div class="header-actions">
       <button class="icon-btn" id="searchToggle" aria-label="Tìm kiếm">

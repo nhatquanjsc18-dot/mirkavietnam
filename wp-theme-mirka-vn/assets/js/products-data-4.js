@@ -40,12 +40,12 @@
   }
 
   var MAIPIN = "may-mai-pin", MAIPIN_L = "Máy mài & chà băng dùng pin";
-  var CHANHAMPIN = "chanham-pin", CHANHAMPIN_L = "Máy chà nhám ly tâm dùng pin";
+  var CHANHAMPIN = "chanham-pin", CHANHAMPIN_L = "Máy chà nhám quỹ đạo dùng pin";
   var DANHBONGPIN = "danhbong-pin", DANHBONGPIN_L = "Máy đánh bóng dùng pin";
 
   var cordlessList = [
     cordlessProduct({slug:"fbs-b-10x330", name:"Mirka® FBS-B Cordless File Belt Sander 10 x 330 mm max 12V", subCat:MAIPIN, subCatLabel:MAIPIN_L,
-      img:MIRKA_IMG_BASE + "0166-MBB1000100-001.jpg",
+      img:"images/products/0166-MBB1000100-001.jpg",
       shortDesc: "Máy chà nhám băng dùng pin 10×330mm, mạnh mẽ, công thái học, không dây.",
       lead: "Mirka® FBS-B 10 là máy chà nhám dạng băng (file belt) dùng pin, mạnh mẽ và công thái học với băng nhám 10×330mm — hoàn toàn không dây, không ống khí nén.",
       features: [
@@ -60,7 +60,7 @@
       why: "Khi công trình không có sẵn nguồn điện hoặc khí nén ổn định, FBS-B 10 vẫn duy trì lực cắt mạnh mẽ của máy chà băng mà không cần dây hay ống dẫn."
     }),
     cordlessProduct({slug:"fbs-b-13x457", name:"Mirka® FBS-B Cordless File Belt Sander 13 x 457 mm max 12V", subCat:MAIPIN, subCatLabel:MAIPIN_L,
-      img:MIRKA_IMG_BASE + "0167-MBB1300100-001.jpg",
+      img:"images/products/0167-MBB1300100-001.jpg",
       shortDesc: "Máy chà nhám băng dùng pin 13×457mm, diện tích tiếp xúc lớn hơn.",
       lead: "Mirka® FBS-B 13 là phiên bản băng nhám lớn hơn 13×457mm của dòng máy chà băng dùng pin, cho năng suất cao hơn trên diện tích rộng.",
       features: [
@@ -75,7 +75,7 @@
       why: "Với diện tích cần xử lý lớn hơn, FBS-B 13 cho năng suất mài cao hơn FBS-B 10 trong khi vẫn giữ trọn lợi thế không dây."
     }),
     cordlessProduct({slug:"angos-arg-b-200", name:"Mirka® ANGOS ARG-B 200 Ø 55 mm max 12V", subCat:MAIPIN, subCatLabel:MAIPIN_L,
-      img:MIRKA_IMG_BASE + "0109-8991100311WB-001.jpg",
+      img:"images/products/0109-8991100311WB-001.jpg",
       shortDesc: "Máy mài góc dùng pin cao cấp Ø55mm cho kim loại và làm sạch sau hàn.",
       lead: "Mirka® ANGOS ARG-B 200 là dụng cụ mài góc dùng pin cao cấp, chuyên cho mài và chà nhám kim loại, làm sạch sau hàn — hoàn toàn không dây.",
       features: [
@@ -90,7 +90,7 @@
       why: "ANGOS ARG-B 200 mang sức mạnh của máy mài góc vào một dụng cụ không dây, phù hợp công trình ngoài trời hoặc vị trí khó kéo dây/ống khí nén."
     }),
     cordlessProduct({slug:"aros-b-150", name:"Mirka® AROS-B 150 Ø 32 mm max 12V Orbit 5.0 mm", subCat:CHANHAMPIN, subCatLabel:CHANHAMPIN_L,
-      img:MIRKA_IMG_BASE + "0110-8991150312WB-001.jpg",
+      img:"images/products/0110-8991150312WB-001.jpg",
       shortDesc: "Máy chà nhám ly tâm dùng pin Ø32mm, tốc độ điều chỉnh 4.000-8.000 RPM.",
       lead: "Mirka® AROS-B 150 là máy chà nhám spot-repair dùng pin, độ ồn thấp và tốc độ điều chỉnh linh hoạt 4.000–8.000 RPM, biên độ 5.0mm.",
       features: [
@@ -105,7 +105,7 @@
       why: "AROS-B 150 giải phóng thợ sơn khỏi dây điện và ống khí nén khi làm spot-repair — với thời lượng pin tới 16 giờ, gần như dùng cả ngày không cần sạc lại."
     }),
     cordlessProduct({slug:"aos-b-130", name:"Mirka® AOS-B 130 Ø 32 mm max 12V Orbit 3.0 mm", subCat:CHANHAMPIN, subCatLabel:CHANHAMPIN_L,
-      img:MIRKA_IMG_BASE + "0113-8991230312WB-001.jpg",
+      img:"images/products/0113-8991230312WB-001.jpg",
       shortDesc: "Máy chà nhám quỹ đạo dùng pin Ø32mm, đạt giải thưởng thiết kế cho spot-repair.",
       lead: "Mirka® AOS-B 130 là máy chà nhám quỹ đạo dùng pin đạt giải thưởng, thiết kế chuyên cho công việc sửa lỗi sơn cục bộ (spot repair) chuyên nghiệp.",
       features: [
@@ -120,7 +120,7 @@
       why: "Là mẫu máy đạt giải thưởng thiết kế, AOS-B 130 tối ưu riêng cho spot-repair — công việc đòi hỏi độ chính xác cao trên diện tích rất nhỏ."
     }),
     cordlessProduct({slug:"arop-b-312", name:"Mirka® AROP-B 312 Ø 77 mm max 12V Orbit 12.0 mm", subCat:DANHBONGPIN, subCatLabel:DANHBONGPIN_L,
-      img:MIRKA_IMG_BASE + "0108-8991012311WB-001.jpg",
+      img:"images/products/0108-8991012311WB-001.jpg",
       shortDesc: "Máy đánh bóng ly tâm dùng pin Ø77mm, biên độ lớn 12mm, cực êm.",
       lead: "Mirka® AROP-B 312 là máy đánh bóng ly tâm (random orbital) dùng pin cho spot-repair, nhẹ nhàng, linh hoạt và cực kỳ êm ái với biên độ 12mm.",
       features: [
@@ -135,7 +135,7 @@
       why: "Độ ồn cực thấp của AROP-B 312 phù hợp môi trường làm việc yêu cầu yên tĩnh, trong khi biên độ 12mm vẫn đảm bảo tốc độ đánh bóng hiệu quả."
     }),
     cordlessProduct({slug:"arp-b-300", name:"Mirka® ARP-B 300 Ø 77 mm max 12V", subCat:DANHBONGPIN, subCatLabel:DANHBONGPIN_L,
-      img:MIRKA_IMG_BASE + "0107-8991000311WB-001.jpg",
+      img:"images/products/0107-8991000311WB-001.jpg",
       shortDesc: "Máy đánh bóng xoay dùng pin Ø77mm, chuyên đánh bóng khu vực nhỏ.",
       lead: "Mirka® ARP-B 300 là máy đánh bóng xoay (rotary) dùng pin với đế 77mm, hoàn hảo cho đánh bóng các khu vực nhỏ mà không cần dây điện hay khí nén.",
       features: [
@@ -150,7 +150,7 @@
       why: "Chế độ xoay của ARP-B 300 cho lực đánh bóng mạnh hơn ly tâm trên cùng diện tích nhỏ — phù hợp khi cần xử lý dứt điểm một điểm sơn cụ thể."
     }),
     cordlessProduct({slug:"aros-b-350", name:"Mirka® AROS-B 350 Ø 77 mm max 12V Orbit 5.0 mm", subCat:CHANHAMPIN, subCatLabel:CHANHAMPIN_L,
-      img:MIRKA_IMG_BASE + "0112-8991153502-001.jpg",
+      img:"images/products/0112-8991153502-001.jpg",
       shortDesc: "Máy chà nhám ly tâm dùng pin Ø77mm, biên độ 5.0mm, không dây 12V.",
       lead: "Mirka® AROS-B 350 là máy chà nhám ly tâm dùng pin 12V DC với đế 77mm, biên độ 5.0mm, phù hợp chà nhám không dây cho khu vực vừa và nhỏ.",
       features: [
@@ -165,7 +165,7 @@
       why: "Với biên độ 5.0mm cân bằng giữa tốc độ và độ mịn, AROS-B 350 phù hợp làm máy chà nhám chính cho các công việc không dây đa dụng."
     }),
     cordlessProduct({slug:"aros-b-325", name:"Mirka® AROS-B 325 Ø 77 mm max 12V Orbit 2.5 mm", subCat:CHANHAMPIN, subCatLabel:CHANHAMPIN_L,
-      img:MIRKA_IMG_BASE + "0111-8991153252-001.jpg",
+      img:"images/products/0111-8991153252-001.jpg",
       shortDesc: "Máy chà nhám ly tâm dùng pin Ø77mm, biên độ mịn 2.5mm.",
       lead: "Mirka® AROS-B 325 mang biên độ mịn 2.5mm vào dòng máy chà nhám dùng pin 12V, chuyên cho các bước hoàn thiện tinh không dây.",
       features: [
@@ -186,7 +186,7 @@
 
   var dustList = [
     dustExtractorProduct({slug:"dexos-1217-hose4m", name:"Mirka® DEXOS 1217 M AFC with Hose 4m", subCat:DEXOS, subCatLabel:DEXOS_L,
-      img:MIRKA_IMG_BASE + "0184-MIX12171221-001.jpg",
+      img:"images/products/0184-MIX12171221-001.jpg",
       shortDesc: "DEXOS 1217 M AFC kèm sẵn ống hút 4m, sẵn sàng kết nối máy chà nhám.",
       lead: "Mirka® DEXOS 1217 M AFC with Hose 4m là bộ máy hút bụi compact 17 lít kèm sẵn ống hút dài 4m, sẵn sàng sử dụng ngay không cần mua thêm phụ kiện.",
       features: [
@@ -201,7 +201,7 @@
       why: "Bộ kèm ống hút giúp tiết kiệm thời gian và chi phí so với mua rời máy hút và ống — phù hợp khi thiết lập trạm làm việc mới."
     }),
     dustExtractorProduct({slug:"dexos-1217-hose-sleeve-4m", name:"Mirka® DEXOS 1217 M AFC with Hose and Sleeve 4m", subCat:DEXOS, subCatLabel:DEXOS_L,
-      img:MIRKA_IMG_BASE + "0185-MIX12171222-001.jpg",
+      img:"images/products/0185-MIX12171222-001.jpg",
       shortDesc: "DEXOS 1217 M AFC kèm ống hút và vỏ bọc 4m, bảo vệ dây/ống tối đa.",
       lead: "Phiên bản đầy đủ nhất của DEXOS 1217, kèm cả ống hút và vỏ bọc bảo vệ (sleeve) dài 4m, gọn gàng và bền hơn khi sử dụng thường xuyên.",
       features: [
@@ -216,7 +216,7 @@
       why: "Vỏ bọc bảo vệ giúp gộp ống hút và dây điện gọn trong một bó duy nhất, giảm nguy cơ vướng víu và kéo dài tuổi thọ phụ kiện khi dùng hằng ngày."
     }),
     dustExtractorProduct({slug:"dust-extractor-1242m", name:"Mirka® Dust Extractor 1242 M", subCat:CHUAN, subCatLabel:CHUAN_L,
-      img:MIRKA_IMG_BASE + "0143-8999227111.jpg",
+      img:"images/products/0143-8999227111.jpg",
       shortDesc: "Máy hút bụi chuyên nghiệp chuẩn M-class, AutoStart, tự làm sạch lọc.",
       lead: "Mirka® Dust Extractor 1242 M là máy hút bụi công nghiệp chuẩn M-class với chức năng AutoStart và tự động làm sạch bộ lọc, phù hợp xưởng chuyên nghiệp quy mô vừa.",
       features: [
@@ -231,7 +231,7 @@
       why: "Dòng Dust Extractor tiêu chuẩn cho công suất và độ bền cao hơn DEXOS compact, phù hợp xưởng có khối lượng công việc lớn, sử dụng liên tục."
     }),
     dustExtractorProduct({slug:"dust-extractor-1025l", name:"Mirka® Dust Extractor 1025 L", subCat:CHUAN, subCatLabel:CHUAN_L,
-      img:MIRKA_IMG_BASE + "0140-8999000111.jpg",
+      img:"images/products/0140-8999000111.jpg",
       shortDesc: "Máy hút bụi chuẩn L-class, công nghệ Push&Clean, AutoStart.",
       lead: "Mirka® Dust Extractor 1025 L đạt chuẩn lọc L-class với công nghệ làm sạch lọc Push&Clean và chức năng AutoStart, phù hợp bụi độc hại mức trung bình.",
       features: [
@@ -246,7 +246,7 @@
       why: "Chuẩn L-class phù hợp với hầu hết ứng dụng chà nhám phổ thông, trong khi Push&Clean giúp thao tác làm sạch lọc nhanh mà không cần tháo rời."
     }),
     dustExtractorProduct({slug:"dust-extractor-1230l", name:"Mirka® Dust Extractor 1230 L", subCat:CHUAN, subCatLabel:CHUAN_L,
-      img:MIRKA_IMG_BASE + "0015-8999200111-Mirka-Dust-Extractor-1230-L-AFC-EU-230V-1.jpg",
+      img:"images/products/0015-8999200111-Mirka-Dust-Extractor-1230-L-AFC-EU-230V-1.jpg",
       shortDesc: "Máy hút bụi chuyên nghiệp chuẩn L-class, AutoStart, tự làm sạch lọc.",
       lead: "Mirka® Dust Extractor 1230 L là máy hút bụi chuyên nghiệp chuẩn L-class với chức năng AutoStart và làm sạch bộ lọc tự động, cho lực hút ổn định suốt ca làm việc.",
       features: [
@@ -261,7 +261,7 @@
       why: "Tính năng tự làm sạch lọc (AFC) giúp duy trì lực hút ổn định suốt ca làm việc dài mà không cần dừng máy để vệ sinh thủ công."
     }),
     dustExtractorProduct({slug:"dust-extractor-1230m", name:"Mirka® Dust Extractor 1230 M", subCat:CHUAN, subCatLabel:CHUAN_L,
-      img:MIRKA_IMG_BASE + "0142-8999220111.jpg",
+      img:"images/products/0142-8999220111.jpg",
       shortDesc: "Máy hút bụi chuyên nghiệp chuẩn M-class, AutoStart, tự làm sạch lọc.",
       lead: "Mirka® Dust Extractor 1230 M mang chuẩn lọc M-class vào dung tích lớn của dòng 1230, phù hợp xưởng cần lực hút mạnh cho bụi công nghiệp.",
       features: [
@@ -276,7 +276,7 @@
       why: "Kết hợp dung tích lớn của dòng 1230 với chuẩn lọc M-class, phù hợp xưởng cần cả công suất hút lẫn mức an toàn bụi cao hơn L-class thông thường."
     }),
     dustExtractorProduct({slug:"dust-extractor-1125l", name:"Mirka® Dust Extractor 1125 L", subCat:CHUAN, subCatLabel:CHUAN_L,
-      img:MIRKA_IMG_BASE + "0141-8999000222-001.jpg",
+      img:"images/products/0141-8999000222-001.jpg",
       shortDesc: "Máy hút bụi chống tĩnh điện chuẩn L-class, hiệu suất cao.",
       lead: "Mirka® Dust Extractor 1125 L là máy hút bụi hiệu suất cao, chống tĩnh điện (Antistatic), tích hợp AutoStart và công nghệ Push & Clean làm sạch lọc.",
       features: [
@@ -291,7 +291,7 @@
       why: "Tính năng chống tĩnh điện giúp giảm nguy cơ tia lửa tĩnh điện khi hút bụi mịn — quan trọng với các xưởng làm việc với composite hoặc dung môi dễ cháy."
     }),
     dustExtractorProduct({slug:"dexos-1230m", name:"Mirka® DEXOS 1230 M AFC", subCat:DEXOS, subCatLabel:DEXOS_L,
-      img:MIRKA_IMG_BASE + "0186-MIX12301220-001.jpg",
+      img:"images/products/0186-MIX12301220-001.jpg",
       shortDesc: "DEXOS 1230 M AFC — máy hút bụi cỡ lớn 30 lít, dùng khô và ướt.",
       lead: "Mirka® DEXOS 1230 M AFC là phiên bản full-size của dòng DEXOS, dung tích 30 lít, chuẩn M-class, tự động làm sạch bộ lọc, dùng được cả khô và ướt.",
       features: [
@@ -306,7 +306,7 @@
       why: "Khi DEXOS 1217 (17L) phải đổ thùng quá thường xuyên, DEXOS 1230 với dung tích 30L giúp kéo dài thời gian làm việc liên tục mà không gián đoạn."
     }),
     dustExtractorProduct({slug:"dexos-1230m-hose4m", name:"Mirka® DEXOS 1230 M AFC with Hose 4m", subCat:DEXOS, subCatLabel:DEXOS_L,
-      img:MIRKA_IMG_BASE + "0187-MIX12301221-001.jpg",
+      img:"images/products/0187-MIX12301221-001.jpg",
       shortDesc: "DEXOS 1230 M AFC kèm sẵn ống hút 4m, sẵn sàng kết nối.",
       lead: "Mirka® DEXOS 1230 M AFC with Hose 4m là bộ máy hút bụi 30 lít kèm sẵn ống hút dài 4m, sẵn sàng sử dụng ngay cho trạm làm việc quy mô lớn.",
       features: [
@@ -321,7 +321,7 @@
       why: "Với dung tích 30L kèm sẵn ống hút, đây là lựa chọn trọn gói cho các trạm làm việc cố định quy mô lớn, không cần mua thêm phụ kiện."
     }),
     dustExtractorProduct({slug:"dexos-1230m-hose-sleeve-4m", name:"Mirka® DEXOS 1230 M AFC with Hose and Sleeve 4m", subCat:DEXOS, subCatLabel:DEXOS_L,
-      img:MIRKA_IMG_BASE + "0188-MIX12301222-001.jpg",
+      img:"images/products/0188-MIX12301222-001.jpg",
       shortDesc: "DEXOS 1230 M AFC kèm ống hút và vỏ bọc 4m, phiên bản đầy đủ nhất.",
       lead: "Phiên bản đầy đủ nhất của DEXOS 1230, kèm cả ống hút và vỏ bọc bảo vệ (sleeve) dài 4m — gọn gàng, bền bỉ cho trạm làm việc chuyên nghiệp.",
       features: [

@@ -40,7 +40,7 @@
   }
 
   var MAIPIN = "may-mai-pin", MAIPIN_L = "Máy mài & chà băng dùng pin";
-  var CHANHAMPIN = "chanham-pin", CHANHAMPIN_L = "Máy chà nhám ly tâm dùng pin";
+  var CHANHAMPIN = "chanham-pin", CHANHAMPIN_L = "Máy chà nhám quỹ đạo dùng pin";
   var DANHBONGPIN = "danhbong-pin", DANHBONGPIN_L = "Máy đánh bóng dùng pin";
 
   var cordlessList = [

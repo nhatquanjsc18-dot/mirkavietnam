@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   var params = new URLSearchParams(window.location.search);
   var activeCat = params.get('cat') || 'all';
-  var activeSub = 'all';
+  var activeSub = params.get('sub') || 'all';
 
   function renderCards(list) {
     grid.innerHTML = '';
@@ -89,4 +89,5 @@ document.addEventListener('DOMContentLoaded', function () {
 
   renderSubFilters();
   applyFilters();
+  if (activeSub !== 'all') filterPanel.classList.add('open');
 });
