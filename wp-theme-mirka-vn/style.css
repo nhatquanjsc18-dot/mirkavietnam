@@ -510,3 +510,52 @@ a{color:inherit;text-decoration:none;}
   .pd-tab{padding:12px 14px;font-size:0.88rem;}
   .article-card{padding:22px 18px;}
 }
+
+/* Floating contact widget: Zalo / bản đồ / Messenger / gọi điện */
+.floating-contact{
+  position:fixed;right:18px;bottom:24px;z-index:400;
+  display:flex;flex-direction:column;align-items:flex-end;gap:12px;
+}
+.fc-item{display:flex;align-items:center;gap:10px;text-decoration:none;}
+.fc-label{
+  background:var(--yellow);color:#111;font-weight:700;font-size:0.82rem;
+  padding:8px 16px;border-radius:20px;white-space:nowrap;
+  box-shadow:0 4px 10px rgba(0,0,0,0.18);
+}
+.fc-icon{
+  width:48px;height:48px;border-radius:50%;flex-shrink:0;
+  display:flex;align-items:center;justify-content:center;
+  background:#fff;box-shadow:0 4px 10px rgba(0,0,0,0.2);
+}
+.fc-icon svg{width:24px;height:24px;}
+.fc-icon.zalo{color:#0068ff;border:2px solid #0068ff;}
+.fc-icon.map{background:#34a853;color:#fff;}
+.fc-icon.messenger{background:#0084ff;color:#fff;}
+.fc-phone-row{display:flex;align-items:center;gap:10px;}
+.fc-phone-pill{
+  background:#c81e2c;color:#fff;font-weight:800;font-size:0.9rem;
+  padding:10px 18px;border-radius:24px;white-space:nowrap;text-decoration:none;
+  box-shadow:0 4px 10px rgba(0,0,0,0.2);
+}
+.fc-phone-btn{
+  width:58px;height:58px;border-radius:50%;flex-shrink:0;
+  background:#c81e2c;color:#fff;text-decoration:none;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  box-shadow:0 4px 14px rgba(0,0,0,0.28);
+  animation:fc-pulse 1.8s infinite;
+}
+.fc-phone-btn svg{width:20px;height:20px;}
+.fc-phone-btn span{font-size:0.58rem;font-weight:800;margin-top:2px;letter-spacing:0.2px;}
+@keyframes fc-pulse{
+  0%{box-shadow:0 0 0 0 rgba(200,30,44,0.5);}
+  70%{box-shadow:0 0 0 14px rgba(200,30,44,0);}
+  100%{box-shadow:0 0 0 0 rgba(200,30,44,0);}
+}
+@media(max-width:560px){
+  .floating-contact{right:10px;bottom:14px;gap:8px;}
+  .fc-label{display:none;}
+  .fc-icon{width:42px;height:42px;}
+  .fc-icon svg{width:20px;height:20px;}
+  .fc-phone-pill{display:none;}
+  .fc-phone-btn{width:52px;height:52px;}
+}
