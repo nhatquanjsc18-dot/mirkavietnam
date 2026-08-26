@@ -1,0 +1,19 @@
+# Node
+node_modules/
+npm-debug.log*
+.npm
+
+# Env / secrets
+.env
+.env.local
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Build artifacts (regenerate với: Compress-Archive -Path wp-theme-mirka-vn -DestinationPath wp-theme-mirka-vn.zip)
+wp-theme-mirka-vn.zip
+
+# Logs
+*.log
+.claude/scheduled_tasks.lock

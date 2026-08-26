@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mirka Việt Nam | Máy chà nhám & Vật liệu mài chuyên nghiệp</title>
+<meta name="description" content="Nhất Quán - đại lý phân phối chính hãng Mirka tại Việt Nam. Máy chà nhám điện, khí nén, dùng pin, vật liệu mài, đánh bóng và phụ kiện Mirka chính hãng, giá tốt, giao hàng toàn quốc.">
+<meta name="keywords" content="Mirka Việt Nam, máy chà nhám Mirka, đại lý Mirka chính hãng, vật liệu mài Mirka, máy đánh bóng Mirka">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="top-bar">
+  <div class="container">
+    <span>Nhà phân phối chính hãng Mirka tại Việt Nam</span>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="logo">
+      <img src="images/site/mirka-logo.svg" alt="Mirka" class="logo-img">
+    </a>
+    <nav class="main-nav">
+      <a href="san-pham.html">Sản phẩm</a>
+      <a href="bai-viet.html">Kiến thức</a>
+      <a href="#industries">Ngành nghề</a>
+      <a href="#about">Về chúng tôi</a>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-btn" id="searchToggle" aria-label="Tìm kiếm">
+        <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+      </button>
+      <button class="icon-btn" id="menuToggle" aria-label="Menu">
+        <svg viewBox="0 0 24 24"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+      </button>
+    </div>
+  </div>
+  <div class="search-bar" id="searchBar">
+    <div class="container">
+      <input type="text" id="headerSearch" placeholder="Tìm sản phẩm, ví dụ: DEROS, LEROS, chà nhám...">
+    </div>
+  </div>
+</header>
+
+<!-- MOBILE / OVERLAY MENU -->
+<div class="menu-overlay" id="menuOverlay">
+  <div class="menu-panel">
+    <div class="menu-panel-head">
+      <img src="images/site/mirka-logo.svg" alt="Mirka" class="logo-img menu-logo">
+      <button class="icon-btn" id="menuClose" aria-label="Đóng">
+        <svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+    </div>
+    <div class="accordion">
+      <button class="accordion-item" data-target="acc1">
+        <span>Sản phẩm</span><span class="plus">+</span>
+      </button>
+      <div class="accordion-body" id="acc1">
+        <a href="san-pham.html?cat=dien">Máy chà nhám điện</a>
+        <a href="san-pham.html?cat=khinen">Máy chà nhám khí nén</a>
+        <a href="san-pham.html?cat=robot">Robot &amp; Tự động hóa</a>
+        <a href="san-pham.html?cat=pin">Máy chà nhám dùng pin</a>
+        <a href="san-pham.html?cat=mai">Vật liệu mài</a>
+        <a href="san-pham.html?cat=danhbong">Đánh bóng</a>
+        <a href="san-pham.html?cat=hutbui">Máy hút bụi</a>
+        <a href="san-pham.html?cat=phukien">Phụ kiện &amp; Hút bụi</a>
+      </div>
+      <button class="accordion-item" data-target="acc2">
+        <span>Kiến thức</span><span class="plus">+</span>
+      </button>
+      <div class="accordion-body" id="acc2">
+        <a href="bai-viet.html">Tin tức &amp; bài viết</a>
+      </div>
+      <button class="accordion-item" data-target="acc3">
+        <span>Ngành nghề</span><span class="plus">+</span>
+      </button>
+      <div class="accordion-body" id="acc3">
+        <a href="#industries">Sửa chữa ô tô</a>
+        <a href="#industries">Gỗ nội thất</a>
+        <a href="#industries">Xây dựng - Hoàn thiện</a>
+      </div>
+      <button class="accordion-item" data-target="acc4">
+        <span>Công ty</span><span class="plus">+</span>
+      </button>
+      <div class="accordion-body" id="acc4">
+        <a href="#about">Giới thiệu</a>
+        <a href="lien-he.html">Liên hệ</a>
+      </div>
+    </div>
+    <a href="lien-he.html" class="menu-foot-link">📍 Tìm đại lý</a>
+    <a href="lien-he.html" class="menu-foot-link">🌐 Ngôn ngữ: Tiếng Việt</a>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <img class="hero-bg" src="images/site/hero-abranet-sanding.jpg" alt="Chà nhám gỗ bằng máy chà nhám ly tâm Mirka và đĩa nhám Abranet">
+  <div class="hero-scrim"></div>
+  <div class="container hero-content">
+    <span class="eyebrow">Sản xuất tại Phần Lan từ năm 1943</span>
+    <h1>DEXOS® 1217 M AFC</h1>
+    <p>Máy hút bụi công nghiệp compact dung tích 17 lít, chuẩn M-class, tự động làm sạch bộ lọc (AFC) — bạn đồng hành lý tưởng cho các máy chà nhám điện Mirka.</p>
+    <a href="mirka-dexos-1217" class="btn btn-primary">Khám phá DEXOS 1217</a>
+  </div>
+</section>
+
+<!-- FEATURE BLOCK 1 -->
+<section class="feature-block">
+  <div class="container feature-grid">
+    <div class="feature-img">
+      <img src="images/site/aerospace-header.jpg" alt="Bảo dưỡng và hoàn thiện bề mặt máy bay với giải pháp Mirka">
+    </div>
+    <div class="feature-text">
+      <span class="eyebrow-dark">Giải pháp cho ngành hàng không</span>
+      <h2>Hoàn thiện bề mặt máy bay đẳng cấp</h2>
+      <p>Từ chà nhám vỏ ngoài, xử lý oxy hóa đến đánh bóng linh kiện — vật liệu mài và hợp chất đánh bóng Mirka đáp ứng tiêu chuẩn khắt khe của ngành bảo dưỡng hàng không (base maintenance).</p>
+      <a href="san-pham.html?cat=mai" class="link-arrow">Khám phá vật liệu mài →</a>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURE BLOCK 2 (reversed) -->
+<section class="feature-block feature-alt">
+  <div class="container feature-grid reverse">
+    <div class="feature-text">
+      <span class="eyebrow-dark">Mirka Iridium™ Soft</span>
+      <h2>Chà nhám khô hiệu quả</h2>
+      <p>Iridium™ Soft là vật liệu mài bọt mềm cho chà nhám khô không bụi, được phát triển riêng cho các hãng ô tô OEM và xưởng sửa chữa va chạm.</p>
+      <a href="san-pham.html?cat=mai" class="link-arrow">Tìm hiểu về vật liệu mài →</a>
+    </div>
+    <div class="feature-img">
+      <img src="images/site/feature-iridium-soft.jpg" alt="Đĩa nhám Iridium Soft với xe thể thao">
+    </div>
+  </div>
+</section>
+
+<!-- STAT / WARRANTY BAND -->
+<section class="stat-band">
+  <div class="container stat-inner">
+    <div class="stat-number">2+1<span>năm</span></div>
+    <div class="stat-text">
+      <h3>Đăng ký bảo hành dễ dàng</h3>
+      <p>Tất cả dụng cụ điện Mirka được bảo hành tiêu chuẩn 2 năm. Đăng ký sản phẩm trong vòng 30 ngày kể từ ngày mua để nhận thêm 1 năm bảo hành miễn phí.</p>
+    </div>
+    <a href="lien-he.html" class="btn btn-outline-light">Đăng ký bảo hành</a>
+  </div>
+</section>
+
+<!-- PRODUCTS: featured -->
+<section class="products" id="products">
+  <div class="container">
+    <div class="section-head-row">
+      <div>
+        <h2 class="page-title">Sản phẩm nổi bật</h2>
+        <p class="page-desc">Một số sản phẩm tiêu biểu trong hơn 95 sản phẩm thuộc 5 nhóm: Máy chà nhám điện, Máy chà nhám khí nén, Vật liệu mài, Đánh bóng, Phụ kiện &amp; Hút bụi. Dữ liệu &amp; hình ảnh gốc từ mirka.com.</p>
+      </div>
+      <a href="san-pham.html" class="link-arrow">Xem tất cả sản phẩm →</a>
+    </div>
+
+    <div class="product-grid" id="featuredGrid"></div>
+  </div>
+</section>
+
+<!-- INDUSTRIES -->
+<section class="industries" id="industries">
+  <div class="container">
+    <h2 class="section-title-center">Giải pháp theo ngành nghề</h2>
+    <div class="industry-grid">
+      <a class="industry-card" href="nganh-va-cham-oto.html">Sửa chữa va chạm ô tô</a>
+      <a class="industry-card" href="nganh-go-noi-that.html">Gỗ &amp; Nội thất</a>
+      <a class="industry-card" href="nganh-xay-dung.html">Xây dựng, Cải tạo &amp; Hoàn thiện nội thất</a>
+      <a class="industry-card" href="nganh-hang-hai.html">Đóng tàu &amp; Hàng hải</a>
+      <a class="industry-card" href="nganh-cong-nghiep-oto.html">Ngành công nghiệp ô tô</a>
+      <a class="industry-card" href="nganh-composite.html">Vật liệu Composite</a>
+      <a class="industry-card" href="nganh-dung-cu.html">Sản xuất dụng cụ</a>
+      <a class="industry-card" href="nganh-powertrain.html">Truyền động (Powertrain)</a>
+    </div>
+  </div>
+</section>
+
+<!-- KNOW-HOW / NEWS -->
+<section class="knowhow" id="knowhow">
+  <div class="container">
+    <div class="section-head-row">
+      <h2>Kiến thức &amp; Tin tức</h2>
+      <a href="bai-viet.html" class="link-arrow">Xem thêm bài viết →</a>
+    </div>
+    <div class="news-grid">
+      <a class="news-card" href="bai-viet.html">
+        <span class="news-tag">Giải thưởng</span>
+        <h4>POLAROS® RP 600 đạt giải thiết kế Red Dot Award</h4>
+      </a>
+      <a class="news-card" href="bai-viet.html">
+        <span class="news-tag">Bền vững</span>
+        <h4>Mirka nhận Huy chương Đồng EcoVadis 2026</h4>
+      </a>
+      <a class="news-card" href="bai-viet.html">
+        <span class="news-tag">Sản phẩm mới</span>
+        <h4>Ra mắt dòng đá mài Bonded Wheels mới cho mài nhỏ gọn</h4>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="container about-inner">
+    <span class="eyebrow-dark">Tận tâm với sự hoàn thiện</span>
+    <h2>Đồng hành cùng bạn từ năm 1943</h2>
+    <p>Mirka là công ty gia đình Phần Lan và là công ty duy nhất phát triển, sản xuất vật liệu mài, dụng cụ và hợp chất đánh bóng dưới cùng một mái nhà. Gần tám thập kỷ qua, Mirka luôn đi đầu trong công nghệ hoàn thiện bề mặt.</p>
+    <a href="lien-he.html" class="link-arrow">Tìm hiểu thêm về chúng tôi →</a>
+  </div>
+</section>
+
+<!-- NEWSLETTER -->
+<section class="newsletter">
+  <div class="container newsletter-inner">
+    <div>
+      <h2>Luôn cập nhật thông tin &amp; cảm hứng</h2>
+      <p>Nhận giải pháp hoàn thiện bề mặt, mẹo sử dụng và xu hướng ngành — dành cho người dùng chuyên nghiệp như bạn.</p>
+    </div>
+    <form class="newsletter-form" id="newsletterForm">
+      <input type="email" placeholder="Nhập email của bạn" required>
+      <button type="submit" class="btn btn-primary">Đăng ký</button>
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer" id="contact">
+  <div class="container footer-grid">
+    <div class="footer-col footer-brand">
+      <img src="images/site/mirka-logo.svg" alt="Mirka" class="logo-img footer-logo">
+      <p>Nội dung và hình ảnh sản phẩm tham khảo từ mirka.com — trang trình bày minh họa, không phải trang chính thức của Mirka.</p>
+      <a href="lien-he.html" class="btn btn-primary footer-cta">Liên hệ báo giá</a>
+      <div class="social-icons">
+        <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21v-8h2.7l.4-3H13.5V8c0-.9.2-1.5 1.6-1.5h1.6V3.9C16.4 3.8 15.4 3.7 14.2 3.7c-2.5 0-4.2 1.5-4.2 4.3V10H7.5v3H10v8h3.5z"/></svg></a>
+        <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12s0-3.2-.4-4.7c-.2-.9-.9-1.6-1.8-1.8C18.3 5 12 5 12 5s-6.3 0-7.8.5c-.9.2-1.6.9-1.8 1.8C2 8.8 2 12 2 12s0 3.2.4 4.7c.2.9.9 1.6 1.8 1.8C5.7 19 12 19 12 19s6.3 0 7.8-.5c.9-.2 1.6-.9 1.8-1.8.4-1.5.4-4.7.4-4.7zM10 15.3V8.7l5.8 3.3-5.8 3.3z"/></svg></a>
+        <a href="#" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.6 3h-2.8v11.4c0 1.5-1.2 2.7-2.7 2.7s-2.7-1.2-2.7-2.7 1.2-2.7 2.7-2.7c.3 0 .5 0 .8.1V8.9c-.3 0-.5-.1-.8-.1-3 0-5.4 2.4-5.4 5.4s2.4 5.4 5.4 5.4 5.4-2.4 5.4-5.4V9.1c1.1.8 2.4 1.3 3.8 1.3V7.6c-2-.1-3.6-1.8-3.7-4.6z"/></svg></a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Hiệu suất vượt trội cùng Mirka</h4>
+      <a href="san-pham.html?cat=mai">Vật liệu mài &amp; Hợp chất</a>
+      <a href="san-pham.html?cat=dien">Máy &amp; Dụng cụ điện</a>
+      <a href="san-pham.html?cat=khinen">Máy &amp; Dụng cụ khí nén</a>
+      <a href="san-pham.html?cat=robot">Robot &amp; Tự động hóa</a>
+      <a href="san-pham.html?cat=pin">Máy dùng pin</a>
+      <a href="san-pham.html?cat=hutbui">Máy hút bụi</a>
+      <a href="san-pham.html?cat=phukien">Phụ kiện &amp; Vật tư tiêu hao</a>
+      <a href="san-pham.html">Tất cả sản phẩm</a>
+    </div>
+    <div class="footer-col">
+      <h4>Công ty</h4>
+      <a href="#about">Giới thiệu</a>
+      <a href="bai-viet.html">Tin tức</a>
+      <a href="#industries">Ngành nghề</a>
+    </div>
+    <div class="footer-col">
+      <h4>Hỗ trợ</h4>
+      <a href="lien-he.html">Tìm đại lý</a>
+      <a href="lien-he.html">Đăng ký bảo hành</a>
+      <a href="lien-he.html">Liên hệ</a>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <span>NHÀ PHÂN PHỐI MIRKA TẠI VIỆT NAM</span>
+  </div>
+</footer>
+
+<script src="products-data.js"></script>
+<script src="products-data-2.js"></script>
+<script src="products-data-3.js"></script>
+<script src="products-data-4.js"></script>
+<script src="products-data-5.js"></script>
+<script src="products-data-6.js"></script>
+<script src="script.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  var featuredSlugs = ['deros-rs-600','leros-950cv','pros-680cv','abranet-150','polaros-rp600','deros-ii-550','abralon-j3-150','dexos-1217'];
+  var grid = document.getElementById('featuredGrid');
+  featuredSlugs.forEach(function (slug) {
+    var p = PRODUCTS.find(function (x) { return x.slug === slug; });
+    if (!p) return;
+    var card = document.createElement('a');
+    card.className = 'product-card';
+    card.href = (window.MIRKA_PRODUCT_BASE || 'mirka-') + p.slug;
+    card.innerHTML =
+      '<div class="product-img"><img src="' + p.img + '" alt="' + p.name + '"></div>' +
+      '<div class="product-body"><span class="mini-tag">' + p.subCatLabel + '</span><h3>' + p.name + '</h3><p class="desc">' + p.shortDesc + '</p></div>';
+    grid.appendChild(card);
+  });
+});
+</script>
+</body>
+</html>
