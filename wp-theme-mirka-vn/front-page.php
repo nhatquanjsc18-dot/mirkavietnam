@@ -56,7 +56,7 @@ get_header();
       <h3>Đăng ký bảo hành dễ dàng</h3>
       <p>Tất cả dụng cụ điện Mirka được bảo hành tiêu chuẩn 2 năm. Đăng ký sản phẩm trong vòng 30 ngày kể từ ngày mua để nhận thêm 1 năm bảo hành miễn phí.</p>
     </div>
-    <a href="<?php echo mirka_url( 'lien-he.html' ); ?>" class="btn btn-outline-light">Đăng ký bảo hành</a>
+    <a href="<?php echo mirka_url( 'dang-ky-bao-hanh.html' ); ?>" class="btn btn-outline-light">Đăng ký bảo hành</a>
   </div>
 </section>
 

@@ -75,4 +75,22 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
+  // Floating contact widget: chỉ bung Zalo/Bản đồ/Messenger khi bấm nút toggle
+  var fcToggle = document.getElementById('fcToggle');
+  var fcExpandable = document.getElementById('fcExpandable');
+  if (fcToggle && fcExpandable) {
+    fcToggle.addEventListener('click', function () {
+      var isOpen = fcExpandable.classList.toggle('open');
+      fcToggle.classList.toggle('open', isOpen);
+      fcToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+    document.addEventListener('click', function (e) {
+      if (!fcExpandable.classList.contains('open')) return;
+      if (fcToggle.contains(e.target) || fcExpandable.contains(e.target)) return;
+      fcExpandable.classList.remove('open');
+      fcToggle.classList.remove('open');
+      fcToggle.setAttribute('aria-expanded', 'false');
+    });
+  }
+
 });

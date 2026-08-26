@@ -208,6 +208,7 @@ get_header();
       <details>
         <summary>Đọc thêm</summary>
         <p>Để đăng ký, khách hàng cần chuẩn bị: hóa đơn mua hàng, mã sản phẩm (in trên thân máy) và thông tin liên hệ. Liên hệ hotline 0907 811 767 hoặc gửi yêu cầu qua mục Liên hệ để được đội ngũ Nhất Quán hỗ trợ đăng ký nhanh chóng.</p>
+        <a href="<?php echo mirka_url( 'dang-ky-bao-hanh.html' ); ?>" class="link-arrow">Đăng ký bảo hành ngay →</a>
       </details>
     </article>
 
