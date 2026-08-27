@@ -60,6 +60,10 @@ get_header();
             <input type="text" id="wfModel" name="model" placeholder="Vd: DEROS II 550 EU" required>
           </div>
           <div class="form-group">
+            <label for="wfSerial">Số serial</label>
+            <input type="text" id="wfSerial" name="serial" placeholder="In trên tem nhãn/thân máy" required>
+          </div>
+          <div class="form-group">
             <label for="wfDate">Ngày mua hàng</label>
             <input type="date" id="wfDate" name="purchaseDate">
           </div>

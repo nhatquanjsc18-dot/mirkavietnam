@@ -120,7 +120,7 @@ if ( is_front_page() ) {
             <div class="mega-col">
               <h4><a href="<?php echo mirka_url( 'san-pham.html?cat=danhbong' ); ?>">Đánh bóng</a></h4>
               <a href="<?php echo mirka_url( 'san-pham.html?cat=danhbong&sub=may-danh-bong' ); ?>">Máy đánh bóng điện</a>
-              <a href="<?php echo mirka_url( 'san-pham.html?cat=danhbong&sub=polarshine' ); ?>">Hợp chất Polarshine</a>
+              <a href="<?php echo mirka_url( 'san-pham.html?cat=danhbong&sub=polarshine' ); ?>">Hoá chất đánh bóng</a>
             </div>
           </div>
         </div>
