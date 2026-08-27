@@ -18,6 +18,7 @@ define( 'MIRKA_THEME_VERSION', '1.0' );
  *   bai-viet  (gán template "Trang: Kiến thức & Tin tức")
  *   lien-he   (gán template "Trang: Liên hệ")
  *   dang-ky-bao-hanh (gán template "Trang: Đăng ký bảo hành")
+ *   dieu-khoan-bao-hanh (gán template "Trang: Điều khoản bảo hành")
  *   nganh-va-cham-oto, nganh-go-noi-that, nganh-xay-dung, nganh-hang-hai,
  *   nganh-cong-nghiep-oto, nganh-composite, nganh-dung-cu, nganh-powertrain
  *   (cả 8 trang này đều gán template "Trang: Ngành nghề")
@@ -47,6 +48,7 @@ function mirka_url( $href ) {
 		'bai-viet.html' => 'bai-viet',
 		'lien-he.html'  => 'lien-he',
 		'dang-ky-bao-hanh.html' => 'dang-ky-bao-hanh',
+		'dieu-khoan-bao-hanh.html' => 'dieu-khoan-bao-hanh',
 		'nganh-va-cham-oto.html'    => 'nganh-va-cham-oto',
 		'nganh-go-noi-that.html'    => 'nganh-go-noi-that',
 		'nganh-xay-dung.html'       => 'nganh-xay-dung',

@@ -19,7 +19,7 @@ get_header();
   <div class="container">
     <span class="eyebrow-dark">Hỗ trợ khách hàng</span>
     <h1 class="page-title">Đăng ký bảo hành sản phẩm Mirka</h1>
-    <p class="page-desc">Đăng ký trong vòng 30 ngày kể từ ngày mua để được cộng thêm 1 năm bảo hành miễn phí, áp dụng cho dụng cụ điện Mirka chính hãng do Nhất Quán phân phối.</p>
+    <p class="page-desc">Đăng ký trong vòng 30 ngày kể từ ngày mua để được cộng thêm 1 năm bảo hành miễn phí, áp dụng cho dụng cụ điện Mirka chính hãng do Nhất Quán phân phối. Xem đầy đủ <a href="<?php echo esc_url( mirka_url( 'dieu-khoan-bao-hanh.html' ) ); ?>" class="link-arrow" style="display:inline">điều khoản bảo hành</a>.</p>
 
     <div class="contact-grid">
       <div class="contact-info">
