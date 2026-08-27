@@ -52,26 +52,70 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  // Newsletter form (demo only)
+  // Gửi dữ liệu form (Liên hệ / Đăng ký bảo hành / Đăng ký nhận tin) về email
+  // Nhất Quán. WordPress dùng admin-ajax.php (window.MIRKA_AJAX_URL do
+  // functions.php khai báo), site tĩnh/Node dùng /api/contact.
+  function mirkaSubmitForm(formType, params, onDone) {
+    var endpoint = window.MIRKA_AJAX_URL || '/api/contact';
+    if (window.MIRKA_AJAX_URL) params.append('action', 'mirka_send_form');
+    params.append('formType', formType);
+    fetch(endpoint, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: params.toString(),
+    })
+      .then(function (res) { return res.json(); })
+      .then(function (data) { onDone(!!(data && data.ok)); })
+      .catch(function () { onDone(false); });
+  }
+
+  // Newsletter form
   var newsletterForm = document.getElementById('newsletterForm');
   if (newsletterForm) {
     newsletterForm.addEventListener('submit', function (e) {
       e.preventDefault();
       var input = newsletterForm.querySelector('input');
-      input.value = '';
-      input.placeholder = 'Cảm ơn bạn đã đăng ký!';
+      var email = input ? input.value : '';
+      var params = new URLSearchParams();
+      params.append('email', email);
+      mirkaSubmitForm('newsletter', params, function (ok) {
+        if (input) {
+          input.value = '';
+          input.placeholder = ok ? 'Cảm ơn bạn đã đăng ký!' : 'Có lỗi xảy ra, vui lòng thử lại.';
+        }
+      });
     });
   }
 
-  // Contact form (demo only)
+  // Contact / Đăng ký bảo hành form
   var contactForm = document.getElementById('contactForm');
   if (contactForm) {
     contactForm.addEventListener('submit', function (e) {
       e.preventDefault();
-      var wrap = document.getElementById('contactFormWrap');
-      var success = document.getElementById('contactSuccess');
-      if (wrap) wrap.hidden = true;
-      if (success) success.hidden = false;
+      var formType = contactForm.getAttribute('data-form-type') || 'lien-he';
+      var submitBtn = contactForm.querySelector('.contact-submit');
+      var originalLabel = submitBtn ? submitBtn.textContent : '';
+      var error = document.getElementById('contactError');
+      if (error) error.hidden = true;
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Đang gửi...';
+      }
+      var params = new URLSearchParams(new FormData(contactForm));
+      mirkaSubmitForm(formType, params, function (ok) {
+        var wrap = document.getElementById('contactFormWrap');
+        var success = document.getElementById('contactSuccess');
+        if (ok) {
+          if (wrap) wrap.hidden = true;
+          if (success) success.hidden = false;
+        } else {
+          if (error) error.hidden = false;
+          if (submitBtn) {
+            submitBtn.disabled = false;
+            submitBtn.textContent = originalLabel;
+          }
+        }
+      });
     });
   }
 

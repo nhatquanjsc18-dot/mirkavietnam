@@ -39,9 +39,10 @@ get_header();
       </div>
 
       <div id="contactFormWrap">
-        <form class="contact-form" id="contactForm">
+        <form class="contact-form" id="contactForm" data-form-type="lien-he">
           <h2>Gửi yêu cầu tư vấn</h2>
           <p class="contact-form-desc">Điền thông tin bên dưới, Nhất Quán sẽ liên hệ lại để tư vấn sản phẩm và báo giá phù hợp.</p>
+          <input type="text" name="website" class="hp-field" tabindex="-1" autocomplete="off">
           <div class="form-group">
             <label for="cfName">Họ và tên</label>
             <input type="text" id="cfName" name="name" required>
@@ -49,6 +50,10 @@ get_header();
           <div class="form-group">
             <label for="cfPhone">Số điện thoại</label>
             <input type="tel" id="cfPhone" name="phone" required>
+          </div>
+          <div class="form-group">
+            <label for="cfEmail">Email</label>
+            <input type="email" id="cfEmail" name="email">
           </div>
           <div class="form-group">
             <label for="cfCompany">Công ty / Đơn vị</label>
@@ -73,6 +78,7 @@ get_header();
             <textarea id="cfMessage" name="message" rows="4" required></textarea>
           </div>
           <button type="submit" class="btn btn-primary contact-submit">Gửi yêu cầu →</button>
+          <p class="contact-error" id="contactError" hidden>Có lỗi xảy ra khi gửi, vui lòng thử lại hoặc gọi hotline <strong><a href="tel:0907811767">0907 811 767</a></strong>.</p>
         </form>
       </div>
 

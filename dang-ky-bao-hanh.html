@@ -165,9 +165,10 @@
       </div>
 
       <div id="contactFormWrap">
-        <form class="contact-form" id="contactForm">
+        <form class="contact-form" id="contactForm" data-form-type="dang-ky-bao-hanh">
           <h2>Đăng ký bảo hành</h2>
           <p class="contact-form-desc">Điền đầy đủ thông tin bên dưới, Nhất Quán sẽ xác nhận đăng ký bảo hành qua điện thoại hoặc email.</p>
+          <input type="text" name="website" class="hp-field" tabindex="-1" autocomplete="off">
           <div class="form-group">
             <label for="wfName">Họ và tên</label>
             <input type="text" id="wfName" name="name" required>
@@ -175,6 +176,10 @@
           <div class="form-group">
             <label for="wfPhone">Số điện thoại</label>
             <input type="tel" id="wfPhone" name="phone" required>
+          </div>
+          <div class="form-group">
+            <label for="wfEmail">Email</label>
+            <input type="email" id="wfEmail" name="email">
           </div>
           <div class="form-group">
             <label for="wfModel">Model máy / Mã sản phẩm</label>
@@ -197,6 +202,7 @@
             <textarea id="wfMessage" name="message" rows="3"></textarea>
           </div>
           <button type="submit" class="btn btn-primary contact-submit">Gửi đăng ký bảo hành →</button>
+          <p class="contact-error" id="contactError" hidden>Có lỗi xảy ra khi gửi, vui lòng thử lại hoặc gọi hotline <strong><a href="tel:0907811767">0907 811 767</a></strong>.</p>
         </form>
       </div>
 

@@ -160,6 +160,14 @@ function mirka_enqueue_assets() {
 		wp_enqueue_script( 'mirka-script', $theme_uri . '/assets/js/script.js', array(), MIRKA_THEME_VERSION, true );
 	}
 
+	// script.js dùng biến này để gửi form Liên hệ/Đăng ký bảo hành/Đăng ký nhận
+	// tin qua admin-ajax.php thay vì /api/contact (chỉ tồn tại ở bản Node).
+	wp_add_inline_script(
+		'mirka-script',
+		'var MIRKA_AJAX_URL = ' . wp_json_encode( admin_url( 'admin-ajax.php' ) ) . ';',
+		'before'
+	);
+
 	if ( is_page_template( 'page-san-pham.php' ) ) {
 		wp_enqueue_script( 'mirka-catalog', $theme_uri . '/assets/js/catalog.js', array( 'mirka-script' ), MIRKA_THEME_VERSION, true );
 	}
@@ -189,3 +197,85 @@ function mirka_enqueue_assets() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'mirka_enqueue_assets' );
+
+/**
+ * Xử lý submit form Liên hệ / Đăng ký bảo hành / Đăng ký nhận tin (gọi qua
+ * admin-ajax.php từ script.js, xem MIRKA_AJAX_URL ở mirka_enqueue_assets()).
+ * Gửi email về mirka_mail_to() bằng wp_mail() — trên hosting thật cần cấu
+ * hình SMTP (plugin WP Mail SMTP hoặc tương đương) để wp_mail() gửi được,
+ * vì PHP mail() mặc định dễ bị nhà cung cấp mail đánh spam/chặn.
+ */
+function mirka_mail_to() {
+	return apply_filters( 'mirka_mail_to', 'nhatquanjsc18@gmail.com' );
+}
+
+function mirka_handle_send_form() {
+	// Honeypot chống spam bot: field "website" ẩn trên form, người dùng thật
+	// không bao giờ điền vào -> nếu có giá trị thì âm thầm coi như thành công.
+	if ( ! empty( $_POST['website'] ) ) {
+		wp_send_json( array( 'ok' => true ) );
+	}
+
+	$form_type = isset( $_POST['formType'] ) ? sanitize_text_field( wp_unslash( $_POST['formType'] ) ) : 'lien-he';
+
+	$labels = array(
+		'lien-he'          => 'Liên hệ tư vấn',
+		'dang-ky-bao-hanh' => 'Đăng ký bảo hành',
+		'newsletter'       => 'Đăng ký nhận tin',
+	);
+	$field_labels = array(
+		'name'         => 'Họ và tên',
+		'phone'        => 'Số điện thoại',
+		'email'        => 'Email',
+		'company'      => 'Công ty / Đơn vị',
+		'product'      => 'Sản phẩm quan tâm',
+		'message'      => 'Nội dung',
+		'model'        => 'Model máy / Mã sản phẩm',
+		'serial'       => 'Số serial',
+		'purchaseDate' => 'Ngày mua hàng',
+		'store'        => 'Nơi mua hàng',
+	);
+	$skip = array( 'formType', 'website', 'action' );
+
+	$rows      = array();
+	$name_val  = '';
+	$email_val = '';
+	foreach ( $_POST as $key => $value ) {
+		if ( in_array( $key, $skip, true ) ) {
+			continue;
+		}
+		$value = sanitize_text_field( wp_unslash( $value ) );
+		if ( $value === '' ) {
+			continue;
+		}
+		if ( $key === 'name' ) {
+			$name_val = $value;
+		}
+		if ( $key === 'email' ) {
+			$email_val = $value;
+		}
+		$label   = isset( $field_labels[ $key ] ) ? $field_labels[ $key ] : $key;
+		$rows[]  = $label . ': ' . $value;
+	}
+
+	if ( $form_type !== 'newsletter' && $name_val === '' ) {
+		wp_send_json( array(
+			'ok'    => false,
+			'error' => 'missing_name',
+		), 400 );
+	}
+
+	$label   = isset( $labels[ $form_type ] ) ? $labels[ $form_type ] : 'Form website';
+	$subject = '[Mirka VN] ' . $label . ( $name_val !== '' ? ' - ' . $name_val : '' );
+	$body    = implode( "\n", $rows );
+	$headers = array( 'Content-Type: text/plain; charset=UTF-8' );
+	if ( $email_val !== '' && is_email( $email_val ) ) {
+		$headers[] = 'Reply-To: ' . $email_val;
+	}
+
+	$sent = wp_mail( mirka_mail_to(), $subject, $body, $headers );
+
+	wp_send_json( array( 'ok' => (bool) $sent ) );
+}
+add_action( 'wp_ajax_mirka_send_form', 'mirka_handle_send_form' );
+add_action( 'wp_ajax_nopriv_mirka_send_form', 'mirka_handle_send_form' );

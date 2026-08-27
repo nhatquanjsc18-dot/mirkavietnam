@@ -1,5 +1,23 @@
 # Deploy lên Hostinger (Node.js App)
 
+## 0. Cấu hình email nhận form Liên hệ / Đăng ký bảo hành / Đăng ký nhận tin
+
+Toàn bộ form trên site đều POST về `/api/contact`, gửi email qua Gmail SMTP
+(xem `mailer.js`). Cần cấu hình trước khi chạy, cả local lẫn trên server:
+
+```bash
+cp .env.example .env
+```
+
+Rồi mở `.env`, điền `GMAIL_APP_PASSWORD` (xem hướng dẫn tạo App Password chi
+tiết ngay trong file `.env.example`). File `.env` đã được `.gitignore`, không
+bao giờ bị đưa lên Git/GitHub. Nếu chưa cấu hình, form vẫn hoạt động nhưng sẽ
+báo lỗi "Có lỗi xảy ra khi gửi..." cho khách và không gửi được email.
+
+Trên Hostinger: vào hPanel → Node.js → **Environment variables**, thêm 3 biến
+`GMAIL_USER`, `GMAIL_APP_PASSWORD`, `MAIL_TO` giống nội dung file `.env` (thay
+vì upload file `.env` lên server).
+
 ## 1. Chạy thử local (máy có Node.js ≥ 18)
 
 ```bash
