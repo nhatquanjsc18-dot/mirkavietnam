@@ -131,7 +131,9 @@ function mirka_enqueue_assets() {
 
 	// Base cho URL sản phẩm SEO-friendly (/mirka-{slug}/), dùng bởi catalog.js
 	// và product-detail.js khi tự dựng href="..." cho từng thẻ sản phẩm.
-	$product_base_js = 'var MIRKA_PRODUCT_BASE = ' . wp_json_encode( home_url( '/mirka-' ) ) . ';';
+	$product_base_js = 'var MIRKA_PRODUCT_BASE = ' . wp_json_encode( home_url( '/mirka-' ) ) . ';'
+		// product-detail.js chuyển hướng về đây nếu slug trên URL không khớp sản phẩm nào.
+		. ' var MIRKA_CATALOG_URL = ' . wp_json_encode( mirka_url( 'san-pham.html' ) ) . ';';
 
 	// Dữ liệu sản phẩm dùng chung cho: trang chủ, trang sản phẩm, trang chi tiết sản phẩm.
 	$needs_product_data = is_front_page() || is_page_template( 'page-san-pham.php' ) || is_page_template( 'page-product.php' );

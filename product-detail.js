@@ -11,7 +11,13 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   var slug = getSlugFromUrl();
-  var product = PRODUCTS.find(function (p) { return p.slug === slug; }) || PRODUCTS[0];
+  var product = PRODUCTS.find(function (p) { return p.slug === slug; });
+  if (!product) {
+    // Slug không khớp sản phẩm nào (link cũ/gõ sai) -> về trang danh mục
+    // thay vì âm thầm hiển thị nhầm sản phẩm đầu tiên.
+    window.location.replace(window.MIRKA_CATALOG_URL || 'san-pham.html');
+    return;
+  }
 
   // Từ khóa SEO theo nguyên tắc "hãng Mirka + model máy" + danh mục, dùng seoKeyword riêng nếu đã khác tên sản phẩm.
   var seoKeyword = (product.seoKeyword && product.seoKeyword !== product.name)
