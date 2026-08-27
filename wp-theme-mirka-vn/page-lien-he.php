@@ -24,7 +24,7 @@ get_header();
         </div>
         <div class="contact-card">
           <span class="mini-tag">Email báo giá &amp; hỗ trợ</span>
-          <p class="contact-value"><a href="mailto:hoai@nhatquan.vn">hoai@nhatquan.vn</a></p>
+          <p class="contact-value"><a href="mailto:nhatquanjsc18@gmail.com">nhatquanjsc18@gmail.com</a></p>
           <p class="contact-note">Phản hồi trong vòng 24 giờ làm việc</p>
         </div>
         <div class="contact-card">
