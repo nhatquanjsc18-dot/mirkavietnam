@@ -81,6 +81,8 @@ a{color:inherit;text-decoration:none;}
 .main-nav a.active-link{color:var(--yellow);}
 .header-actions{display:flex;gap:6px;align-items:center;}
 .header-actions .icon-btn{color:#fff;}
+/* Nút menu hamburger chỉ cần trên di động (desktop đã có main-nav đầy đủ) */
+#menuToggle{display:none;}
 
 /* Nav item với mega-menu / dropdown */
 .nav-item{display:flex;align-items:center;}
@@ -486,6 +488,7 @@ a{color:inherit;text-decoration:none;}
 /* Responsive */
 @media(max-width:960px){
   .main-nav{display:none;}
+  #menuToggle{display:flex;}
   .feature-grid{grid-template-columns:1fr;gap:24px;}
   .feature-grid.reverse .feature-img{order:0;}
   .stat-inner{grid-template-columns:1fr;text-align:center;}
