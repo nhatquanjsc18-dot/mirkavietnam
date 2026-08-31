@@ -13,12 +13,12 @@ define( 'MIRKA_THEME_VERSION', '1.0' );
 function mirka_google_analytics() {
 	?>
 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-3N7VMY04NC"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-N2BC37WDGF"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-  gtag('config', 'G-3N7VMY04NC');
+  gtag('config', 'G-N2BC37WDGF');
 </script>
 	<?php
 }
