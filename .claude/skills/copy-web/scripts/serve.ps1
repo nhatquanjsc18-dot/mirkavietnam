@@ -15,7 +15,7 @@
 # 5. Trỏ preview_start vào cấu hình launch.json có "url": "http://localhost:8791"
 #    (tool preview không hiểu localhost URL có path/query, chỉ origin thuần).
 
-$root = "D:\OneDrive\1 2026\Tạo web bằng AI\Web AI mirka"   # <-- SỬA ĐƯỜNG DẪN NÀY
+$root = "D:\1 2026\Tạo web bằng AI\Web AI mirka"   # <-- SỬA ĐƯỜNG DẪN NÀY
 $port = 8791
 
 $listener = New-Object System.Net.HttpListener

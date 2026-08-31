@@ -8,6 +8,23 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 define( 'MIRKA_THEME_VERSION', '1.0' );
 
 /**
+ * Google Analytics (gtag.js) — đo lường lưu lượng truy cập website.
+ */
+function mirka_google_analytics() {
+	?>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3N7VMY04NC"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-3N7VMY04NC');
+</script>
+	<?php
+}
+add_action( 'wp_head', 'mirka_google_analytics', 1 );
+
+/**
  * Chuyển link nội bộ kiểu file tĩnh (vd: "san-pham.html?cat=dien",
  * "product.html?slug=deros-rs-600", "index.html#about") thành URL WordPress
  * thật, dựa trên các trang (Page) mà người dùng tạo ra và gán template.
