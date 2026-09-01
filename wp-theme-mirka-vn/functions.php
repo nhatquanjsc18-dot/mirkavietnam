@@ -25,6 +25,15 @@ function mirka_google_analytics() {
 add_action( 'wp_head', 'mirka_google_analytics', 1 );
 
 /**
+ * Favicon (logo Nhất Quán) — hiển thị trên tab trình duyệt.
+ */
+function mirka_favicon() {
+	$favicon_url = get_template_directory_uri() . '/assets/images/site/favicon.png';
+	echo '<link rel="icon" type="image/png" href="' . esc_url( $favicon_url ) . '">' . "\n";
+}
+add_action( 'wp_head', 'mirka_favicon', 1 );
+
+/**
  * Chuyển link nội bộ kiểu file tĩnh (vd: "san-pham.html?cat=dien",
  * "product.html?slug=deros-rs-600", "index.html#about") thành URL WordPress
  * thật, dựa trên các trang (Page) mà người dùng tạo ra và gán template.
