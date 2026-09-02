@@ -52,8 +52,8 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  // Gửi dữ liệu form (Liên hệ / Đăng ký bảo hành / Đăng ký nhận tin) về email
-  // Nhất Quán. WordPress dùng admin-ajax.php (window.MIRKA_AJAX_URL do
+  // Gửi dữ liệu form (Đăng ký bảo hành / Đăng ký nhận tin) về email Nhất
+  // Quán. WordPress dùng admin-ajax.php (window.MIRKA_AJAX_URL do
   // functions.php khai báo), site tĩnh/Node dùng /api/contact.
   function mirkaSubmitForm(formType, params, onDone) {
     var endpoint = window.MIRKA_AJAX_URL || '/api/contact';
@@ -67,6 +67,41 @@ document.addEventListener('DOMContentLoaded', function () {
       .then(function (res) { return res.json(); })
       .then(function (data) { onDone(!!(data && data.ok)); })
       .catch(function () { onDone(false); });
+  }
+
+  // Form Liên hệ gửi thẳng qua Web3Forms (api.web3forms.com), không qua
+  // backend riêng của site. Access key: WordPress khai báo sẵn qua
+  // window.MIRKA_WEB3FORMS_KEY (functions.php); site tĩnh/Node đọc từ
+  // site.json ở gốc site (fetch 1 lần, dùng lại cho các lần gửi sau).
+  var web3FormsKeyPromise = null;
+  function getWeb3FormsKey() {
+    if (window.MIRKA_WEB3FORMS_KEY) return Promise.resolve(window.MIRKA_WEB3FORMS_KEY);
+    if (!web3FormsKeyPromise) {
+      web3FormsKeyPromise = fetch('/site.json')
+        .then(function (res) { return res.json(); })
+        .then(function (cfg) { return cfg.web3formsAccessKey || null; })
+        .catch(function () { return null; });
+    }
+    return web3FormsKeyPromise;
+  }
+
+  function submitViaWeb3Forms(params, onDone) {
+    getWeb3FormsKey().then(function (key) {
+      if (!key) { onDone(false); return; }
+      var payload = { access_key: key };
+      params.forEach(function (value, name) {
+        if (name === 'formType' || name === 'website') return;
+        payload[name] = value;
+      });
+      fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify(payload),
+      })
+        .then(function (res) { return res.json(); })
+        .then(function (data) { onDone(!!(data && data.success)); })
+        .catch(function () { onDone(false); });
+    });
   }
 
   // Newsletter form
@@ -102,7 +137,7 @@ document.addEventListener('DOMContentLoaded', function () {
         submitBtn.textContent = 'Đang gửi...';
       }
       var params = new URLSearchParams(new FormData(contactForm));
-      mirkaSubmitForm(formType, params, function (ok) {
+      var handleResult = function (ok) {
         var wrap = document.getElementById('contactFormWrap');
         var success = document.getElementById('contactSuccess');
         if (ok) {
@@ -115,7 +150,12 @@ document.addEventListener('DOMContentLoaded', function () {
             submitBtn.textContent = originalLabel;
           }
         }
-      });
+      };
+      if (formType === 'lien-he') {
+        submitViaWeb3Forms(params, handleResult);
+      } else {
+        mirkaSubmitForm(formType, params, handleResult);
+      }
     });
   }
 

@@ -7,6 +7,11 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 
 define( 'MIRKA_THEME_VERSION', '1.0' );
 
+// Access key Web3Forms cho form Liên hệ (api.web3forms.com) — key này được
+// thiết kế để lộ ở phía client (Web3Forms xác thực theo domain đăng ký),
+// không phải bí mật cần giấu như mật khẩu/API secret thông thường.
+define( 'MIRKA_WEB3FORMS_ACCESS_KEY', '59b6b1c8-f026-4011-afea-a77acb1f09e8' );
+
 /**
  * Google Analytics (gtag.js) — đo lường lưu lượng truy cập website.
  */
@@ -188,11 +193,19 @@ function mirka_enqueue_assets() {
 		wp_enqueue_script( 'mirka-script', $theme_uri . '/assets/js/script.js', array(), MIRKA_THEME_VERSION, true );
 	}
 
-	// script.js dùng biến này để gửi form Liên hệ/Đăng ký bảo hành/Đăng ký nhận
-	// tin qua admin-ajax.php thay vì /api/contact (chỉ tồn tại ở bản Node).
+	// script.js dùng biến này để gửi form Đăng ký bảo hành/Đăng ký nhận tin
+	// qua admin-ajax.php thay vì /api/contact (chỉ tồn tại ở bản Node).
 	wp_add_inline_script(
 		'mirka-script',
 		'var MIRKA_AJAX_URL = ' . wp_json_encode( admin_url( 'admin-ajax.php' ) ) . ';',
+		'before'
+	);
+
+	// Form Liên hệ gửi thẳng qua Web3Forms (api.web3forms.com), không qua
+	// admin-ajax.php — script.js dùng access key này thay vì fetch site.json.
+	wp_add_inline_script(
+		'mirka-script',
+		'var MIRKA_WEB3FORMS_KEY = ' . wp_json_encode( MIRKA_WEB3FORMS_ACCESS_KEY ) . ';',
 		'before'
 	);
 
