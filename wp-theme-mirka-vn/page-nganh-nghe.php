@@ -132,6 +132,12 @@ get_header();
       <a href="<?php echo mirka_url( $data['cta_href'] ); ?>" class="link-arrow"><?php echo esc_html( $data['cta_text'] ); ?></a>
       <?php endif; ?>
 
+      <div class="industry-products" style="margin-top:40px;">
+        <h3 style="margin-bottom:16px;">Sản phẩm gợi ý cho ngành này</h3>
+        <div class="product-grid" id="industryProductGrid"></div>
+        <p style="margin-top:20px;"><a href="<?php echo mirka_url( 'san-pham.html' ); ?>" class="link-arrow">Xem toàn bộ danh mục sản phẩm →</a></p>
+      </div>
+
       <div class="pd-contact-band">
         <p>Cần tư vấn giải pháp cho ngành của bạn? <strong>0907 811 767</strong></p>
         <a href="<?php echo mirka_url( 'lien-he.html' ); ?>" class="btn btn-primary">Yêu cầu tư vấn</a>

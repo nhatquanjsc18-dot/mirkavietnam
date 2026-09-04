@@ -166,8 +166,9 @@ function mirka_enqueue_assets() {
 		// product-detail.js chuyển hướng về đây nếu slug trên URL không khớp sản phẩm nào.
 		. ' var MIRKA_CATALOG_URL = ' . wp_json_encode( mirka_url( 'san-pham.html' ) ) . ';';
 
-	// Dữ liệu sản phẩm dùng chung cho: trang chủ, trang sản phẩm, trang chi tiết sản phẩm.
-	$needs_product_data = is_front_page() || is_page_template( 'page-san-pham.php' ) || is_page_template( 'page-product.php' );
+	// Dữ liệu sản phẩm dùng chung cho: trang chủ, trang sản phẩm, trang chi
+	// tiết sản phẩm, và 8 trang ngành nghề (khối "Sản phẩm gợi ý").
+	$needs_product_data = is_front_page() || is_page_template( 'page-san-pham.php' ) || is_page_template( 'page-product.php' ) || is_page_template( 'page-nganh-nghe.php' );
 
 	if ( $needs_product_data ) {
 		wp_enqueue_script( 'mirka-products-1', $theme_uri . '/assets/js/products-data.js', array(), MIRKA_THEME_VERSION, true );
@@ -187,6 +188,15 @@ function mirka_enqueue_assets() {
 		wp_enqueue_script( 'mirka-products-6', $theme_uri . '/assets/js/products-data-6.js', array( 'mirka-products-5' ), MIRKA_THEME_VERSION, true );
 		wp_enqueue_script( 'mirka-script', $theme_uri . '/assets/js/script.js', array( 'mirka-products-6' ), MIRKA_THEME_VERSION, true );
 		wp_add_inline_script( 'mirka-script', $product_base_js, 'before' );
+
+		if ( is_page_template( 'page-nganh-nghe.php' ) ) {
+			wp_enqueue_script( 'mirka-industries', $theme_uri . '/assets/js/industries.js', array( 'mirka-products-6' ), MIRKA_THEME_VERSION, true );
+			wp_add_inline_script(
+				'mirka-industries',
+				"document.addEventListener('DOMContentLoaded', function () { renderIndustryProducts(" . wp_json_encode( get_post_field( 'post_name' ) ) . ", 'industryProductGrid', 8); });",
+				'after'
+			);
+		}
 	} else {
 		// Trang không có dữ liệu sản phẩm (vd: bai-viet, page.php) vẫn cần script.js
 		// cho menu/search/accordion/newsletter, nhưng không phụ thuộc products-data.
