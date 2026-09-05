@@ -74,6 +74,33 @@ function getProductsForIndustry(industrySlug) {
   });
 }
 
+// Chọn xen kẽ theo nhóm (subCat/category) thay vì lấy nguyên N sản phẩm đầu
+// mảng — tránh tình trạng 1 nhóm đông (vd. máy điện DEROS/LEROS xuất hiện
+// trước trong products-data.js) chiếm hết chỗ, khiến các nhóm khác (vd. máy
+// khí nén ROS/PROS) không bao giờ lọt vào danh sách gợi ý dù vẫn khớp ngành.
+function pickDiverse(list, limit) {
+  var groups = {};
+  var order = [];
+  list.forEach(function (p) {
+    // Nhóm theo category (dien/khinen/pin/mai/danhbong/hutbui/phukien/robot)
+    // chứ không phải subCat — subCat quá nhiều loại (tuong/ly-tam/xoay/...)
+    // nên nhóm theo nó vẫn để 1 category đông (vd. dien) chiếm hết vòng đầu.
+    var key = p.category;
+    if (!groups[key]) { groups[key] = []; order.push(key); }
+    groups[key].push(p);
+  });
+  var picked = [];
+  for (var round = 0; picked.length < limit; round++) {
+    var addedThisRound = false;
+    for (var i = 0; i < order.length && picked.length < limit; i++) {
+      var g = groups[order[i]];
+      if (g[round]) { picked.push(g[round]); addedThisRound = true; }
+    }
+    if (!addedThisRound) break;
+  }
+  return picked;
+}
+
 // Render tối đa `limit` sản phẩm gợi ý vào #<gridId>, ẩn cả khối cha
 // (.industry-products) nếu ngành đó chưa có sản phẩm nào khớp.
 function renderIndustryProducts(industrySlug, gridId, limit) {
@@ -85,7 +112,7 @@ function renderIndustryProducts(industrySlug, gridId, limit) {
     if (wrap) wrap.hidden = true;
     return;
   }
-  list.slice(0, limit || 8).forEach(function (p) {
+  pickDiverse(list, limit || 8).forEach(function (p) {
     var card = document.createElement('a');
     card.className = 'product-card';
     card.href = (window.MIRKA_PRODUCT_BASE || 'mirka-') + p.slug;
