@@ -77,6 +77,22 @@ app.get('/mirka-:slug([a-z0-9-]+)', (req, res) => {
   res.sendFile(path.join(ROOT, 'product.html'));
 });
 
+// Trang nhà phân phối: URL sạch /nha-phan-phoi/ (nội dung vẫn ở file
+// nha-phan-phoi-mirka.html). Bản không có dấu / cuối redirect 301 sang bản
+// có dấu / để chỉ có một URL chuẩn, tránh trùng nội dung.
+//
+// Lưu ý: routing mặc định của Express KHÔNG phân biệt "/nha-phan-phoi" và
+// "/nha-phan-phoi/" khi so khớp (strict routing tắt) -- nếu đăng ký hai
+// app.get() riêng, route đăng ký trước sẽ "ăn" luôn cả hai dạng và có thể
+// gây redirect lặp vô hạn. Gộp vào một handler và tự phân biệt qua req.path
+// (req.path vẫn giữ nguyên dấu / như client gửi lên) để tránh bẫy này.
+app.get(['/nha-phan-phoi', '/nha-phan-phoi/'], (req, res) => {
+  if (req.path === '/nha-phan-phoi') {
+    return res.redirect(301, '/nha-phan-phoi/');
+  }
+  res.sendFile(path.join(ROOT, 'nha-phan-phoi-mirka.html'));
+});
+
 // Toàn bộ file tĩnh còn lại: *.html, style.css, script.js, catalog.js,
 // product-detail.js, products-data*.js, thư mục images/.
 app.use(
