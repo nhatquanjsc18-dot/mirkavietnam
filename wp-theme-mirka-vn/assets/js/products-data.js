@@ -67,6 +67,29 @@ var PRODUCTS = [
     why: "Biên độ 2.5 mm giúp DEROS II 625 cho bề mặt mịn tối đa, gần như không lộ vệt xoáy — lựa chọn hàng đầu cho bước hoàn thiện cuối trước sơn."
   },
   {
+    slug: "deros-ii-650",
+    name: "Mirka® DEROS II 650 EU",
+    seoKeyword: "Mirka® DEROS II 650 EU",
+    category: "dien", categoryLabel: "Máy chà nhám điện",
+    subCat: "ly-tam", subCatLabel: "Máy chà nhám quỹ đạo",
+    img: "images/products/0220-MID6504044a.jpg",
+    shortDesc: "Biên độ 5.0 mm phổ dụng nhất, cân bằng tốt giữa tốc độ bóc tách và độ mịn bề mặt.",
+    lead: "Mirka® DEROS II 650 EU là máy chà nhám quỹ đạo điện Ø 150 mm, biên độ 5.0 mm — mức orbit được dùng phổ biến nhất, phù hợp cho hầu hết công việc chà nhám thông thường.",
+    features: [
+      ["⚙️","Động cơ Brushless bền bỉ, hiệu suất ổn định, tiêu thụ điện ít"],
+      ["🪶","Thiết kế nhẹ, cân bằng tốt, thao tác thoải mái trong thời gian dài"],
+      ["📐","Pad 150 mm lý tưởng cho bề mặt lớn: sơn ô tô, bàn gỗ, tường"],
+      ["⚖️","Orbit 5.0 mm cân bằng tốt giữa tốc độ bóc tách và độ mịn bề mặt"],
+      ["🎛️","Cần gạt điều chỉnh tốc độ dễ thao tác, đèn LED báo tốc độ rõ ràng"],
+      ["💨","Hệ thống hút bụi trung tâm, làm việc sạch sẽ và an toàn"],
+      ["📶","Kết nối Bluetooth, đồng bộ ứng dụng myMirka theo dõi độ rung"],
+      ["🏆","Bảo hành 2 năm chính hãng Mirka"]
+    ],
+    specs: {"Mã hàng":"MID6504044","Đường kính đầu mài":"150 mm","Biên độ (Orbit)":"5.0 mm","Động cơ":"Brushless","Tốc độ":"4.000 - 10.000 vòng/phút","Công suất":"400 W","Độ ồn (LpA)":"71.0 dB","Độ rung":"3.4 m/s²","Điện áp":"220-240 VAC","Trọng lượng":"1.1 kg","Bảo hành":"1 năm"},
+    applications: ["Chà nhám tổng quát trên mọi loại bề mặt","Xả nhám lớp lót, sơn cũ trước khi sơn mới","Xưởng nội thất/gỗ: bàn, cửa, tủ gỗ"],
+    why: "Orbit 5.0 mm là lựa chọn \"an toàn\" và phổ dụng nhất trong dòng DEROS II — cân bằng tốt giữa tốc độ bóc tách vật liệu và chất lượng bề mặt, phù hợp làm máy chính cho hầu hết công việc hàng ngày."
+  },
+  {
     slug: "deros-ii-325",
     name: "Mirka® DEROS II 325 EU",
     seoKeyword: "Mirka® DEROS II 325 EU",
