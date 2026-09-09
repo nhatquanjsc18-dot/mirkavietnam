@@ -31,6 +31,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
     <div class="footer-col">
       <h4>Công ty</h4>
       <a href="<?php echo mirka_url( 'index.html#about' ); ?>">Giới thiệu</a>
+      <a href="<?php echo mirka_url( 'nha-phan-phoi-mirka.html' ); ?>">Nhà phân phối Mirka</a>
       <a href="<?php echo mirka_url( 'bai-viet.html' ); ?>">Tin tức</a>
       <a href="<?php echo mirka_url( 'index.html#industries' ); ?>">Ngành nghề</a>
     </div>

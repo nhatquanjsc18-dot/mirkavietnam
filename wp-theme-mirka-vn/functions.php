@@ -50,6 +50,7 @@ add_action( 'wp_head', 'mirka_favicon', 1 );
  *   lien-he   (gán template "Trang: Liên hệ")
  *   dang-ky-bao-hanh (gán template "Trang: Đăng ký bảo hành")
  *   dieu-khoan-bao-hanh (gán template "Trang: Điều khoản bảo hành")
+ *   nha-phan-phoi-mirka (gán template "Trang: Nhà phân phối Mirka")
  *   nganh-va-cham-oto, nganh-go-noi-that, nganh-xay-dung, nganh-hang-hai,
  *   nganh-cong-nghiep-oto, nganh-composite, nganh-dung-cu, nganh-powertrain
  *   (cả 8 trang này đều gán template "Trang: Ngành nghề")
@@ -80,6 +81,7 @@ function mirka_url( $href ) {
 		'lien-he.html'  => 'lien-he',
 		'dang-ky-bao-hanh.html' => 'dang-ky-bao-hanh',
 		'dieu-khoan-bao-hanh.html' => 'dieu-khoan-bao-hanh',
+		'nha-phan-phoi-mirka.html' => 'nha-phan-phoi-mirka',
 		'nganh-va-cham-oto.html'    => 'nganh-va-cham-oto',
 		'nganh-go-noi-that.html'    => 'nganh-go-noi-that',
 		'nganh-xay-dung.html'       => 'nganh-xay-dung',
