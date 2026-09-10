@@ -139,6 +139,22 @@ get_header();
   <div class="container article-list">
 
     <article class="article-card">
+      <span class="news-tag">Kiến thức kỹ thuật</span>
+      <h2>Chuẩn hút bụi L và M là gì? Xưởng gỗ và garage ô tô cần loại nào?</h2>
+      <p class="article-meta">10/09/2026 · An toàn lao động</p>
+      <p>Khi chà nhám gỗ, chà sơn xe hay mài kim loại, bụi sinh ra không chỉ gây bẩn — nhiều loại cực kỳ nguy hại cho sức khỏe nếu hít phải lâu dài. Tiêu chuẩn châu Âu EN 60335-2-69 phân loại máy hút bụi công nghiệp thành 3 cấp lọc: L, M và H. Bài viết so sánh hai chuẩn phổ biến nhất trong xưởng gỗ và garage ô tô.</p>
+      <details>
+        <summary>Đọc thêm</summary>
+        <p><strong>Chuẩn L (Low Hazard)</strong> yêu cầu hiệu suất lọc tối thiểu 99%, phù hợp bụi gỗ mềm (thông, bạch đàn, cao su), bụi xi măng/thạch cao, bụi kim loại không độc hại. Máy dùng túi lọc + pre-filter, cấu tạo đơn giản, giá thấp hơn — nhưng không dùng được cho gỗ cứng hay bụi có nguy cơ gây ung thư.</p>
+        <p><strong>Chuẩn M (Medium Hazard)</strong> lọc tối thiểu 99,9% — kỹ hơn chuẩn L đến 10 lần. Phù hợp bụi gỗ cứng (oak, beech, teak — WHO xếp nhóm nguy cơ ung thư mũi xoang), sơn cũ chứa chì, bụi composite/carbon, kim loại nặng. Máy chuẩn M bắt buộc có lọc HEPA kiểm định độc lập, túi đựng bụi kín khi thay, nhiều dòng còn tự làm sạch bộ lọc để giữ lực hút ổn định suốt ca làm việc.</p>
+        <p><strong>So sánh nhanh:</strong> Chuẩn L lọc ≥99% (bụi lọt ≤1%), hạt kiểm soát &gt;1µm, dùng túi lọc thường, không bắt buộc kiểm định độc lập hay túi kín, chi phí thấp. Chuẩn M lọc ≥99,9% (bụi lọt ≤0,1%), hạt kiểm soát ≥0,5µm, bắt buộc lọc HEPA, kiểm định độc lập và túi kín, chi phí cao hơn.</p>
+        <p><strong>Chọn chuẩn L</strong> nếu xưởng chủ yếu chà gỗ mềm, MDF, chà sơn mới không chì, mài kim loại thông dụng, hoặc ưu tiên ngân sách đầu tư. <strong>Chọn chuẩn M</strong> nếu dùng nhiều gỗ cứng, garage chà bỏ sơn cũ/xe đời cũ, công nhân làm việc nhiều giờ liên tục trong bụi, cần đạt chuẩn an toàn lao động nghiêm ngặt (xuất khẩu, OSHA), hoặc gia công composite/carbon fiber.</p>
+        <p>Với xưởng vừa làm gỗ cứng vừa xử lý sơn xe, đầu tư máy hút bụi chuẩn M là lựa chọn an toàn và bền vững hơn về lâu dài.</p>
+        <a href="<?php echo mirka_url( 'san-pham.html?cat=hutbui' ); ?>" class="link-arrow">Xem máy hút bụi Mirka chuẩn M/L →</a>
+      </details>
+    </article>
+
+    <article class="article-card">
       <span class="news-tag">Giải thưởng</span>
       <h2>POLAROS® RP 600 đạt giải thiết kế Red Dot Award 2026</h2>
       <p class="article-meta">15/03/2026 · Sản phẩm mới</p>
