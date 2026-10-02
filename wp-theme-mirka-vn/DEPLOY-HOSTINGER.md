@@ -44,6 +44,18 @@ Ghi chú:
 - Trang `product` không cần nội dung gì cả, vì nội dung sản phẩm đọc trực tiếp từ URL (`/mirka-{model}/`) qua JavaScript, không phải từ nội dung Trang.
 - **Trang chủ KHÔNG cần tạo** — theme tự nhận `front-page.php` làm trang chủ mặc định, không cần cấu hình gì thêm ở Settings → Reading.
 
+## 3b. Nạp 268 sản phẩm vào database
+
+Sản phẩm được quản lý ở menu **Sản phẩm Mirka** trong wp-admin (mỗi sản phẩm: tên, danh mục, ảnh, mô tả, tính năng, thông số, ứng dụng). Có 2 cách nạp dữ liệu — chọn **một** trong hai:
+
+**Cách A (khuyên dùng — 1 nút bấm):** vào **Sản phẩm Mirka → Nạp dữ liệu mẫu** → bấm *Nạp 268 sản phẩm*. Bấm lại nhiều lần vẫn an toàn (sản phẩm trùng slug được bỏ qua).
+
+**Cách B (file import):** cài plugin **WordPress Importer** (Công cụ → Nhập → WordPress → Cài đặt ngay), rồi chọn file `mirka-products.xml` (thư mục `wordpress-import/` của dự án, hoặc file được gửi kèm) → Upload and import → chọn gán tác giả là tài khoản quản trị → Submit. **Phải kích hoạt theme trước** khi import, nếu không loại "Sản phẩm" chưa tồn tại và dữ liệu bị bỏ qua.
+
+Trong lúc chưa nạp, web vẫn hiển thị bộ sản phẩm đóng gói sẵn trong theme (không bị trống). Sau khi nạp, front-end tự đọc từ database và tự làm mới mỗi khi bạn thêm/sửa/xoá sản phẩm.
+
+Ảnh sản phẩm nhập ở ô *Ảnh sản phẩm* dạng `images/products/ten-file.jpg` (ảnh có sẵn trong theme) hoặc dán URL đầy đủ của ảnh tải lên Thư viện media.
+
 ## 4. Kiểm tra URL sản phẩm (SEO-friendly)
 
 Theme có rewrite rule tự đăng ký: `/mirka-{model}/` → trang `product`. Sau khi tạo xong 15 trang ở bước 3, vào lại **Settings → Permalinks** và bấm **Save Changes** một lần nữa để WordPress nạp lại rewrite rule mới nhất.
@@ -73,4 +85,4 @@ Mỗi khi theme được chỉnh sửa và đóng gói lại thành `wp-theme-mi
 2. Upload lại file zip mới qua **Add New Theme → Upload Theme**, Activate lại.
 3. Vào **Settings → Permalinks** bấm **Save Changes** một lần nữa nếu có trang mới được thêm.
 
-Dữ liệu sản phẩm, bài viết, trang nội dung đều nằm trong các file PHP/JS của theme (không lưu trong database), nên cập nhật theme không ảnh hưởng tới Trang/Bài viết đã tạo trong WordPress.
+Sản phẩm lưu trong database (mục **Sản phẩm Mirka** ở wp-admin); trang nội dung và bài viết nằm trong file PHP của theme. Cập nhật theme không làm mất sản phẩm đã nạp/đã sửa trong database.

@@ -8,7 +8,7 @@ var PRODUCTS = [
     seoKeyword: "Mirka® LEROS 950CV EU",
     category: "dien", categoryLabel: "Máy chà nhám điện",
     subCat: "tuong", subCatLabel: "Máy chà nhám tường",
-    img: "images/products/0179-MIW9502022BA.jpg",
+    img: MIRKA_IMG_BASE + "0179-MIW9502022BA.jpg",
     shortDesc: "Máy chà nhám trần và tường siêu nhẹ, đầu mài linh hoạt 180°, mô tơ không chổi than.",
     lead: "Mirka® LEROS 950CV EU là máy chà nhám tường & trần siêu nhẹ, đầu mài xoay linh hoạt cho phép người dùng thao tác ở mọi góc độ mà không cần leo thang hay dùng giàn giáo.",
     features: [
@@ -30,7 +30,7 @@ var PRODUCTS = [
     seoKeyword: "Mirka® LEROS-S Short 950CV EU",
     category: "dien", categoryLabel: "Máy chà nhám điện",
     subCat: "tuong", subCatLabel: "Máy chà nhám tường",
-    img: "images/products/0180-MIW9502122.jpg",
+    img: MIRKA_IMG_BASE + "0180-MIW9502122.jpg",
     shortDesc: "Phiên bản ngắn gọn, lý tưởng cho phòng nhỏ như phòng tắm, tủ âm tường.",
     lead: "Mirka® LEROS-S Short là phiên bản rút gọn của LEROS, tối ưu cho không gian hẹp — hành lang, phòng tắm, tủ tường — nơi máy chà tường thông thường khó thao tác.",
     features: [
@@ -50,7 +50,7 @@ var PRODUCTS = [
     seoKeyword: "Mirka® DEROS II 625 EU",
     category: "dien", categoryLabel: "Máy chà nhám điện",
     subCat: "ly-tam", subCatLabel: "Máy chà nhám quỹ đạo",
-    img: "images/products/0175-MID6254044a.jpg",
+    img: MIRKA_IMG_BASE + "0175-MID6254044a.jpg",
     shortDesc: "Chà nhám không bụi cho mọi bề mặt, phù hợp độ nhám mịn và xả nhám lót trước sơn.",
     lead: "Mirka® DEROS II 625 EU là máy chà nhám quỹ đạo điện Ø 150 mm, biên độ 2.5 mm — chuyên cho các bước hoàn thiện tinh, xả nhám lớp lót trước khi sơn.",
     features: [
@@ -72,7 +72,7 @@ var PRODUCTS = [
     seoKeyword: "Mirka® DEROS II 650 EU",
     category: "dien", categoryLabel: "Máy chà nhám điện",
     subCat: "ly-tam", subCatLabel: "Máy chà nhám quỹ đạo",
-    img: "images/products/0220-MID6504044a.jpg",
+    img: MIRKA_IMG_BASE + "0220-MID6504044a.jpg",
     shortDesc: "Biên độ 5.0 mm phổ dụng nhất, cân bằng tốt giữa tốc độ bóc tách và độ mịn bề mặt.",
     lead: "Mirka® DEROS II 650 EU là máy chà nhám quỹ đạo điện Ø 150 mm, biên độ 5.0 mm — mức orbit được dùng phổ biến nhất, phù hợp cho hầu hết công việc chà nhám thông thường.",
     features: [
@@ -95,7 +95,7 @@ var PRODUCTS = [
     seoKeyword: "Mirka® DEROS II 325 EU",
     category: "dien", categoryLabel: "Máy chà nhám điện",
     subCat: "ly-tam", subCatLabel: "Máy chà nhám quỹ đạo",
-    img: "images/products/0168-MID3254044-Mirka-DEROS-II-325-77mm-Orbit-2.5-1.jpg",
+    img: MIRKA_IMG_BASE + "0168-MID3254044-Mirka-DEROS-II-325-77mm-Orbit-2.5-1.jpg",
     shortDesc: "Thiết kế nhỏ gọn cho các khu vực chà nhám hẹp, thao tác chính xác với độ nhám mịn.",
     lead: "Mirka® DEROS II 325 EU sở hữu đầu mài nhỏ gọn Ø 77 mm, biên độ 2.5 mm — chuyên trị các chi tiết nhỏ, góc cạnh đòi hỏi độ chính xác cao.",
     features: [
@@ -115,7 +115,7 @@ var PRODUCTS = [
     seoKeyword: "Mirka® DEROS II 550 EU",
     category: "dien", categoryLabel: "Máy chà nhám điện",
     subCat: "ly-tam", subCatLabel: "Máy chà nhám quỹ đạo",
-    img: "images/products/0173-MID5504044a.jpg",
+    img: MIRKA_IMG_BASE + "0173-MID5504044a.jpg",
     shortDesc: "Chà nhám không bụi đa dụng, phù hợp cho các công việc chà nhám thông thường trên nhiều bề mặt.",
     lead: "Mirka® DEROS II 550 EU — mẫu chà nhám ly tâm bán chạy nhất, cân bằng giữa tốc độ và độ mịn, phù hợp phần lớn công việc hằng ngày.",
     features: [
@@ -136,7 +136,7 @@ var PRODUCTS = [
     seoKeyword: "Mirka® DEROS II 680 EU",
     category: "dien", categoryLabel: "Máy chà nhám điện",
     subCat: "ly-tam", subCatLabel: "Máy chà nhám quỹ đạo",
-    img: "images/products/0177-MID6804044a.jpg",
+    img: MIRKA_IMG_BASE + "0177-MID6804044a.jpg",
     shortDesc: "Biên độ lớn cho tốc độ bóc tách vật liệu nhanh, hiệu quả cao trên diện tích lớn.",
     lead: "Mirka® DEROS II 680 EU sở hữu biên độ 8.0 mm — mức bóc tách vật liệu nhanh nhất trong dòng DEROS II, tối ưu cho khối lượng công việc lớn.",
     features: [
@@ -156,7 +156,7 @@ var PRODUCTS = [
     seoKeyword: "Mirka® DEROS II 750 EU",
     category: "dien", categoryLabel: "Máy chà nhám điện",
     subCat: "ly-tam", subCatLabel: "Máy chà nhám quỹ đạo",
-    img: "images/products/0178-MID7504044.jpg",
+    img: MIRKA_IMG_BASE + "0178-MID7504044.jpg",
     shortDesc: "Chà nhám không bụi cho bề mặt lớn, năng suất cao cho công việc chà nhám tổng quát.",
     lead: "Mirka® DEROS II 750 EU dùng pad lớn Ø 175 mm, phù hợp thi công các bề mặt rộng như trần, tường, mặt bàn lớn với năng suất vượt trội.",
     features: [
@@ -176,7 +176,7 @@ var PRODUCTS = [
     seoKeyword: "Mirka® DEROS II 5650 EU",
     category: "dien", categoryLabel: "Máy chà nhám điện",
     subCat: "ly-tam", subCatLabel: "Máy chà nhám quỹ đạo",
-    img: "images/products/0174-MID5650404CA-Mirka-DEROS-II-5650-125-150mm-Orbit-5.0-Case-1.jpg",
+    img: MIRKA_IMG_BASE + "0174-MID5650404CA-Mirka-DEROS-II-5650-125-150mm-Orbit-5.0-Case-1.jpg",
     shortDesc: "Máy chà nhám 2-trong-1, đổi nhanh giữa pad Ø125mm và Ø150mm, kèm hộp đựng.",
     lead: "Mirka® DEROS II 5650 EU là máy chà nhám ly tâm 2-trong-1 độc đáo, cho phép chuyển đổi giữa đầu mài Ø125mm và Ø150mm chỉ với một máy duy nhất, kèm hộp đựng chuyên dụng.",
     features: [
@@ -196,7 +196,7 @@ var PRODUCTS = [
     seoKeyword: "Mirka® DEROS II 350 EU",
     category: "dien", categoryLabel: "Máy chà nhám điện",
     subCat: "ly-tam", subCatLabel: "Máy chà nhám quỹ đạo",
-    img: "images/products/0170-MID3504044.jpg",
+    img: MIRKA_IMG_BASE + "0170-MID3504044.jpg",
     shortDesc: "Máy chà nhám ly tâm nhỏ gọn Ø77mm, biên độ 5.0mm cho tốc độ cắt nhanh hơn.",
     lead: "Mirka® DEROS II 350 EU kết hợp đầu mài nhỏ gọn Ø 77 mm với biên độ 5.0 mm, cho tốc độ bóc tách vật liệu nhanh hơn phiên bản Ø77mm biên độ 2.5mm trên cùng diện tích nhỏ.",
     features: [
@@ -216,7 +216,7 @@ var PRODUCTS = [
     seoKeyword: "Mirka® DEROS RS 600 EU",
     category: "dien", categoryLabel: "Máy chà nhám điện",
     subCat: "xoay", subCatLabel: "Máy chà nhám đồng tâm",
-    img: "images/products/0192-MRS6002100-001.jpg",
+    img: MIRKA_IMG_BASE + "0192-MRS6002100-001.jpg",
     shortDesc: "Máy chà nhám xoay công thái học thế hệ mới, hiệu quả vượt trội trên mọi bề mặt.",
     lead: "Mirka® DEROS RS 600 EU là máy chà nhám xoay (rotary) hạng nặng thế hệ mới — sinh ra cho các ứng dụng khắt khe nhất, mang lại kết quả mạnh mẽ và hiệu quả trên nhiều loại bề mặt.",
     features: [
@@ -236,7 +236,7 @@ var PRODUCTS = [
     seoKeyword: "Mirka® DEOS II 343 EU",
     category: "dien", categoryLabel: "Máy chà nhám điện",
     subCat: "chi-tiet", subCatLabel: "Máy chà nhám chi tiết",
-    img: "images/products/0169-MID3434044a.jpg",
+    img: MIRKA_IMG_BASE + "0169-MID3434044a.jpg",
     shortDesc: "Lý tưởng cho hard-to-reach places: cửa sổ, khung cửa, xử lý bột trét gỗ.",
     lead: "Mirka® DEOS II 343 EU là máy chà nhám chi tiết siêu mỏng (cao chỉ 10 cm), chuyên trị các vị trí khó tiếp cận mà máy tròn thông thường không vào được.",
     features: [
@@ -256,7 +256,7 @@ var PRODUCTS = [
     seoKeyword: "Mirka® DEOS II 383 EU",
     category: "dien", categoryLabel: "Máy chà nhám điện",
     subCat: "chi-tiet", subCatLabel: "Máy chà nhám chi tiết",
-    img: "images/products/0172-MID3834044a.jpg",
+    img: MIRKA_IMG_BASE + "0172-MID3834044a.jpg",
     shortDesc: "Thiết kế chuyên cho sửa chữa thân vỏ ô tô, phù hợp bột trét và lớp lót sơn.",
     lead: "Mirka® DEOS II 383 EU có đầu mài dài 70 x 198 mm, thiết kế chuyên biệt cho đồng sơn ô tô — xử lý các đường gân, cạnh dài trên thân xe.",
     features: [
@@ -276,7 +276,7 @@ var PRODUCTS = [
     seoKeyword: "Mirka® DEOS II 353 EU",
     category: "dien", categoryLabel: "Máy chà nhám điện",
     subCat: "chi-tiet", subCatLabel: "Máy chà nhám chi tiết",
-    img: "images/products/0171-MID3534044a.jpg",
+    img: MIRKA_IMG_BASE + "0171-MID3534044a.jpg",
     shortDesc: "Đầu mài trung bình 81x133mm, cân bằng giữa DEOS 343 nhỏ và DEOS 383 dài.",
     lead: "Mirka® DEOS II 353 EU sở hữu đầu mài kích thước trung bình 81 x 133 mm, phù hợp cho các công việc gỗ trang trí, cửa và khung — nằm giữa bản 343 nhỏ gọn và bản 383 chuyên ô tô.",
     features: [
@@ -296,7 +296,7 @@ var PRODUCTS = [
     seoKeyword: "Mirka® DEOS II 663 EU Delta",
     category: "dien", categoryLabel: "Máy chà nhám điện",
     subCat: "chi-tiet", subCatLabel: "Máy chà nhám chi tiết",
-    img: "images/products/0176-MID6634044a.jpg",
+    img: MIRKA_IMG_BASE + "0176-MID6634044a.jpg",
     shortDesc: "Đầu mài hình tam giác, lý tưởng cho góc cạnh và khu vực khó tiếp cận ở mọi góc độ.",
     lead: "Mirka® DEOS II 663 EU Delta sở hữu đầu mài hình tam giác độc đáo — giải pháp tối ưu cho các góc vuông, góc nhọn mà đầu mài vuông/tròn không xử lý được.",
     features: [
@@ -318,7 +318,7 @@ var PRODUCTS = [
     seoKeyword: "Mirka® Abranet® Ace HD Ø 150 mm",
     category: "mai", categoryLabel: "Vật liệu mài",
     subCat: "luoi-nham", subCatLabel: "Giấy nhám lưới Abranet",
-    img: "images/products/0148-AH24102540-mirka-abranet-ace-hd-discs-150mm-p40-2-1-.jpg",
+    img: MIRKA_IMG_BASE + "0148-AH24102540-mirka-abranet-ace-hd-discs-150mm-p40-2-1-.jpg",
     shortDesc: "Giấy nhám lưới bền chắc với hạt ceramic, cho tuổi thọ vượt trội trên vật liệu cứng.",
     lead: "Abranet® Ace HD là vật liệu mài dạng lưới bền chắc với hạt ceramic — được gia cố đặc biệt để chịu được các bề mặt cứng, mài mòn cao mà vẫn giữ khả năng thoát bụi 100% qua lưới.",
     features: [
@@ -338,7 +338,7 @@ var PRODUCTS = [
     seoKeyword: "Mirka® Abranet® Ø 150 mm",
     category: "mai", categoryLabel: "Vật liệu mài",
     subCat: "luoi-nham", subCatLabel: "Giấy nhám lưới Abranet",
-    img: "images/products/0041-5424105032.jpg",
+    img: MIRKA_IMG_BASE + "0041-5424105032.jpg",
     shortDesc: "Vật liệu mài dạng lưới nguyên bản của Mirka — tiêu chuẩn cho chà nhám không bụi.",
     lead: "Abranet® là sản phẩm mài dạng lưới độc quyền đã định hình lại ngành chà nhám không bụi từ năm 1990 — phù hợp cho bột trét, sơn lót và nhiều loại vật liệu.",
     features: [
@@ -358,7 +358,7 @@ var PRODUCTS = [
     seoKeyword: "Mirka® Galaxy Ø 150 mm Multifit",
     category: "mai", categoryLabel: "Vật liệu mài",
     subCat: "da-nang", subCatLabel: "Vật liệu mài đa năng",
-    img: "images/products/0160-FY6M105040-b.jpg",
+    img: MIRKA_IMG_BASE + "0160-FY6M105040-b.jpg",
     shortDesc: "Vật liệu mài thế hệ mới, lớp phủ chống bám dính, chà nhám khô không bụi tốc độ cao.",
     lead: "Galaxy là dòng vật liệu mài đa năng thế hệ mới của Mirka, thiết kế để \"không bao giờ chai lì\" — lớp phủ đặc biệt chống bám dính giúp duy trì tốc độ cắt suốt vòng đời sản phẩm.",
     features: [
@@ -378,7 +378,7 @@ var PRODUCTS = [
     seoKeyword: "Mirka® Gold Ø 150 mm 15 lỗ",
     category: "mai", categoryLabel: "Vật liệu mài",
     subCat: "da-nang", subCatLabel: "Vật liệu mài đa năng",
-    img: "images/products/0033-2361105060.jpg",
+    img: MIRKA_IMG_BASE + "0033-2361105060.jpg",
     shortDesc: "Vật liệu mài đa năng bền bỉ, phù hợp chà nhám tốc độ cao trên nhiều vật liệu.",
     lead: "Mirka® Gold là dòng giấy nhám đa năng kinh điển, được tin dùng rộng rãi nhờ độ bền và khả năng chà nhám tốc độ cao ổn định trên nhiều loại vật liệu.",
     features: [
@@ -397,7 +397,7 @@ var PRODUCTS = [
     seoKeyword: "Mirka® Abralon® J3 Ø 150 mm",
     category: "mai", categoryLabel: "Vật liệu mài",
     subCat: "danh-bong", subCatLabel: "Vật liệu mài & đánh bóng mịn",
-    img: "images/products/0145-8M030195-mirka-abralon-j3-discs-150mm-k3000-3-1-.jpg",
+    img: MIRKA_IMG_BASE + "0145-8M030195-mirka-abralon-j3-discs-150mm-k3000-3-1-.jpg",
     shortDesc: "Đĩa mài mềm nền vải, cho bề mặt siêu mịn — lý tưởng trước đánh bóng bóng gương.",
     lead: "Abralon® J3 là đĩa mài nền vải mềm, độ nhám siêu mịn — bước đệm hoàn hảo giữa chà nhám và đánh bóng để đạt độ bóng gương trên cả bề mặt phẳng lẫn cong.",
     features: [
@@ -416,7 +416,7 @@ var PRODUCTS = [
     seoKeyword: "Mirka Iridium™ Ø 150 mm 121 lỗ",
     category: "mai", categoryLabel: "Vật liệu mài",
     subCat: "da-nang", subCatLabel: "Vật liệu mài đa năng",
-    img: "images/products/0036-246CH05040.jpg",
+    img: MIRKA_IMG_BASE + "0036-246CH05040.jpg",
     shortDesc: "Giấy nhám cao cấp cho chà nhám đa dụng, tối ưu tốc độ và hiệu quả.",
     lead: "Mirka Iridium™ là dòng giấy nhám cao cấp, được hoàn thiện để tối đa hoá tốc độ chà nhám và hiệu quả sử dụng trên nhiều loại bề mặt.",
     features: [
@@ -437,7 +437,7 @@ var PRODUCTS = [
     seoKeyword: "Mirka® PS 1437 EU Ø 150 mm",
     category: "danhbong", categoryLabel: "Đánh bóng",
     subCat: "may-danh-bong", subCatLabel: "Máy đánh bóng điện",
-    img: "images/products/0114-8991300111-002.jpg",
+    img: MIRKA_IMG_BASE + "0114-8991300111-002.jpg",
     shortDesc: "Máy đánh bóng xoay công thái học với động cơ điện mô-men xoắn cao.",
     lead: "Mirka® PS 1437 EU là máy đánh bóng xoay (rotary) công thái học, trang bị động cơ điện mô-men xoắn cao — cho lực đánh bóng ổn định ngay cả ở tốc độ thấp.",
     features: [
@@ -456,7 +456,7 @@ var PRODUCTS = [
     seoKeyword: "Mirka® POLAROS® RP 600 EU",
     category: "danhbong", categoryLabel: "Đánh bóng",
     subCat: "may-danh-bong", subCatLabel: "Máy đánh bóng điện",
-    img: "images/products/0191-MRP6002100-001.jpg",
+    img: MIRKA_IMG_BASE + "0191-MRP6002100-001.jpg",
     shortDesc: "Máy đánh bóng xoay không chổi than, đạt giải thiết kế Red Dot Award 2026.",
     lead: "Mirka® POLAROS® RP 600 là máy đánh bóng xoay 150 mm thế hệ mới nhất, đạt giải thưởng thiết kế Red Dot Award 2026 — sở hữu công nghệ Ramp Up/Ramp Down độc quyền cho khởi động và dừng êm ái.",
     features: [
@@ -478,7 +478,7 @@ var PRODUCTS = [
     seoKeyword: "Đế lót Backing Pad Net Ø 150 mm",
     category: "phukien", categoryLabel: "Phụ kiện & Hút bụi",
     subCat: "de-lot", subCatLabel: "Đế lót (Backing Pad)",
-    img: "images/products/0003-8292605011-Backing-Pad-Net-150mm-5-16_-Grip-48H-Medium-1.jpg",
+    img: MIRKA_IMG_BASE + "0003-8292605011-Backing-Pad-Net-150mm-5-16_-Grip-48H-Medium-1.jpg",
     shortDesc: "Đế lót cho máy chà nhám ly tâm điện, đảm bảo độ êm và tuổi thọ giấy nhám.",
     lead: "Đế lót Backing Pad Net Ø 150 mm là phụ kiện thay thế chính hãng cho các dòng máy chà nhám ly tâm điện Mirka, giúp phân bổ lực đều và kéo dài tuổi thọ giấy nhám.",
     features: [
@@ -497,7 +497,7 @@ var PRODUCTS = [
     seoKeyword: "Đế lót Backing Pad Ø 225 mm cho LEROS",
     category: "phukien", categoryLabel: "Phụ kiện & Hút bụi",
     subCat: "de-lot", subCatLabel: "Đế lót (Backing Pad)",
-    img: "images/products/0020-MIW9514312-Backing-Pad-225mm-25H-Grip-LEROS-_-8-screws--1.jpg",
+    img: MIRKA_IMG_BASE + "0020-MIW9514312-Backing-Pad-225mm-25H-Grip-LEROS-_-8-screws--1.jpg",
     shortDesc: "Đế lót chính hãng thay thế cho máy chà tường Mirka LEROS & LEROS-S.",
     lead: "Đế lót Ø 225 mm chuyên dùng cho máy chà tường Mirka® LEROS và LEROS-S, giúp duy trì hiệu suất hút bụi và độ êm khi thi công diện rộng.",
     features: [
@@ -516,7 +516,7 @@ var PRODUCTS = [
     seoKeyword: "Đế lót Backing Pad 81 x 133 mm",
     category: "phukien", categoryLabel: "Phụ kiện & Hút bụi",
     subCat: "de-lot", subCatLabel: "Đế lót (Backing Pad)",
-    img: "images/products/0030-8295350111-Backing-Pad-81x133mm-Grip-54H-Medium--1.jpg",
+    img: MIRKA_IMG_BASE + "0030-8295350111-Backing-Pad-81x133mm-Grip-54H-Medium--1.jpg",
     shortDesc: "Đế lót thay thế cho máy chà nhám chi tiết dòng DEOS 81 x 133 mm.",
     lead: "Đế lót 81 x 133 mm dành riêng cho các dòng máy chà nhám chi tiết Mirka® DEOS đầu mài hình chữ nhật, đảm bảo độ êm khi làm việc ở các góc cạnh.",
     features: [
@@ -535,7 +535,7 @@ var PRODUCTS = [
     seoKeyword: "Đế lót Backing Pad Net 100 x 152 x 152 mm (DEOS Delta)",
     category: "phukien", categoryLabel: "Phụ kiện & Hút bụi",
     subCat: "de-lot", subCatLabel: "Đế lót (Backing Pad)",
-    img: "images/products/0025-8292663011-Backing-Pad-Net-100x152x152mm-Grip-32H-Medium-1.jpg",
+    img: MIRKA_IMG_BASE + "0025-8292663011-Backing-Pad-Net-100x152x152mm-Grip-32H-Medium-1.jpg",
     shortDesc: "Đế lót hình tam giác (Delta) 100x152x152mm cho máy DEOS Delta.",
     lead: "Đế lót Backing Pad Net 100 x 152 x 152 mm có hình dạng tam giác đặc thù, thay thế chính hãng cho máy chà nhám DEOS® 663 Delta.",
     features: [
@@ -554,7 +554,7 @@ var PRODUCTS = [
     seoKeyword: "Đế lót Backing Pad Ø 135 mm M14 (Polisher)",
     category: "phukien", categoryLabel: "Phụ kiện & Hút bụi",
     subCat: "de-lot", subCatLabel: "Đế lót (Backing Pad)",
-    img: "images/products/0086-8297902011-b.jpg",
+    img: MIRKA_IMG_BASE + "0086-8297902011-b.jpg",
     shortDesc: "Đế lót Ø135mm ren M14, dùng cùng đĩa đánh bóng Ø150mm.",
     lead: "Đế lót Backing Pad Ø 135 mm M14 chuyên dùng cho máy đánh bóng, kết hợp cùng đĩa đánh bóng Ø150mm để đạt hiệu quả đánh bóng tối ưu.",
     features: [
@@ -573,7 +573,7 @@ var PRODUCTS = [
     seoKeyword: "Đế lót Backing Pad 75 x 100 mm 33H",
     category: "phukien", categoryLabel: "Phụ kiện & Hút bụi",
     subCat: "de-lot", subCatLabel: "Đế lót (Backing Pad)",
-    img: "images/products/0016-8295340111-Backing-Pad-75x100mm-Grip-33H-Medium-1.jpg",
+    img: MIRKA_IMG_BASE + "0016-8295340111-Backing-Pad-75x100mm-Grip-33H-Medium-1.jpg",
     shortDesc: "Đế lót 75x100mm, 33 lỗ, cho máy chà nhám chi tiết DEOS 343.",
     lead: "Đế lót Backing Pad 75 x 100 mm 33H là phụ tùng thay thế chính hãng cho máy chà nhám chi tiết DEOS 343, với cấu hình 33 lỗ hút bụi.",
     features: [
@@ -592,7 +592,7 @@ var PRODUCTS = [
     seoKeyword: "Đế lót Backing Pad Ø 125 mm 5/16\"",
     category: "phukien", categoryLabel: "Phụ kiện & Hút bụi",
     subCat: "de-lot", subCatLabel: "Đế lót (Backing Pad)",
-    img: "images/products/0074-8295192111-d.jpg",
+    img: MIRKA_IMG_BASE + "0074-8295192111-d.jpg",
     shortDesc: "Đế lót Ø125mm ren 5/16\", kích thước phổ biến nhất cho máy chà nhám ly tâm.",
     lead: "Đế lót Backing Pad Ø 125 mm 5/16\" là phụ tùng thay thế phổ biến nhất, tương thích phần lớn máy chà nhám ly tâm điện và khí nén cỡ 125mm.",
     features: [
@@ -611,7 +611,7 @@ var PRODUCTS = [
     seoKeyword: "Đế lót Backing Pad Ø 32 mm Quick Lock",
     category: "phukien", categoryLabel: "Phụ kiện & Hút bụi",
     subCat: "de-lot", subCatLabel: "Đế lót (Backing Pad)",
-    img: "images/products/0068-8294597311-Backing-Pad-Quick-Lock-32mm-PSA-Soft-CPD-4.jpg",
+    img: MIRKA_IMG_BASE + "0068-8294597311-Backing-Pad-Quick-Lock-32mm-PSA-Soft-CPD-4.jpg",
     shortDesc: "Đế lót Quick Lock cho máy chà nhám mini Ø 32 mm — tháo lắp không cần dụng cụ.",
     lead: "Đế lót Quick Lock Ø 32 mm cho phép thay giấy nhám tức thì mà không cần dụng cụ hỗ trợ — tối ưu cho các dòng máy chà nhám mini chuyên chi tiết nhỏ.",
     features: [
@@ -630,7 +630,7 @@ var PRODUCTS = [
     seoKeyword: "Mirka® DEXOS 1217 M AFC",
     category: "hutbui", categoryLabel: "Máy hút bụi",
     subCat: "hut-bui-dexos", subCatLabel: "Dòng DEXOS",
-    img: "images/products/0183-MIX12171220-001.jpg",
+    img: MIRKA_IMG_BASE + "0183-MIX12171220-001.jpg",
     shortDesc: "Máy hút bụi công nghiệp nhỏ gọn 17 lít, dùng được cả khô và ướt.",
     lead: "Mirka® DEXOS 1217 M AFC là máy hút bụi công nghiệp compact dung tích 17 lít, chuẩn M-class, tự động làm sạch bộ lọc (AFC) — bạn đồng hành lý tưởng cho các máy chà nhám điện Mirka.",
     features: [

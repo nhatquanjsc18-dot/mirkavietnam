@@ -7,6 +7,9 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 
 define( 'MIRKA_THEME_VERSION', '1.0' );
 
+// Sản phẩm lưu trong database (Custom Post Type) — xem inc/products-cpt.php.
+require_once get_template_directory() . '/inc/products-cpt.php';
+
 // Access key Web3Forms cho form Liên hệ (api.web3forms.com) — key này được
 // thiết kế để lộ ở phía client (Web3Forms xác thực theo domain đăng ký),
 // không phải bí mật cần giấu như mật khẩu/API secret thông thường.
@@ -108,7 +111,7 @@ function mirka_url( $href ) {
 /**
  * URL sản phẩm SEO-friendly: /mirka-{slug}/ — nguyên tắc "hãng Mirka + model máy".
  * Không cần tạo Page riêng cho từng sản phẩm: rewrite rule bên dưới điều hướng
- * mọi /mirka-*/ về Trang "product" (page-product.php), rồi product-detail.js
+ * mọi URL dạng /mirka-{slug}/ về Trang "product" (page-product.php), rồi product-detail.js
  * đọc model từ chính URL (window.location.pathname) để render đúng sản phẩm.
  */
 function mirka_product_url( $slug ) {
@@ -173,26 +176,42 @@ function mirka_enqueue_assets() {
 	$needs_product_data = is_front_page() || is_page_template( 'page-san-pham.php' ) || is_page_template( 'page-product.php' ) || is_page_template( 'page-nganh-nghe.php' );
 
 	if ( $needs_product_data ) {
-		wp_enqueue_script( 'mirka-products-1', $theme_uri . '/assets/js/products-data.js', array(), MIRKA_THEME_VERSION, true );
-		// Toàn bộ ảnh sản phẩm đã được tải về và đặt trong assets/images/products/
-		// (không còn phụ thuộc / hotlink CDN img.mirka.com). products-data*.js ghép
-		// MIRKA_IMG_BASE với tên file ảnh cục bộ, nên biến này phải tồn tại TRƯỚC
-		// khi products-data.js chạy.
-		wp_add_inline_script(
-			'mirka-products-1',
-			'var MIRKA_IMG_BASE = ' . wp_json_encode( trailingslashit( $theme_uri . '/assets/images/products' ) ) . ';',
-			'before'
-		);
-		wp_enqueue_script( 'mirka-products-2', $theme_uri . '/assets/js/products-data-2.js', array( 'mirka-products-1' ), MIRKA_THEME_VERSION, true );
-		wp_enqueue_script( 'mirka-products-3', $theme_uri . '/assets/js/products-data-3.js', array( 'mirka-products-2' ), MIRKA_THEME_VERSION, true );
-		wp_enqueue_script( 'mirka-products-4', $theme_uri . '/assets/js/products-data-4.js', array( 'mirka-products-3' ), MIRKA_THEME_VERSION, true );
-		wp_enqueue_script( 'mirka-products-5', $theme_uri . '/assets/js/products-data-5.js', array( 'mirka-products-4' ), MIRKA_THEME_VERSION, true );
-		wp_enqueue_script( 'mirka-products-6', $theme_uri . '/assets/js/products-data-6.js', array( 'mirka-products-5' ), MIRKA_THEME_VERSION, true );
-		wp_enqueue_script( 'mirka-script', $theme_uri . '/assets/js/script.js', array( 'mirka-products-6' ), MIRKA_THEME_VERSION, true );
+		// Nguồn dữ liệu: ưu tiên sản phẩm trong database (mirka_product); nếu database
+		// chưa có sản phẩm nào thì dùng bộ products-data*.js đóng gói sẵn trong theme.
+		$products_source = mirka_products_source();
+
+		if ( $products_source && $products_source['type'] === 'file' ) {
+			$products_handle = 'mirka-products-db';
+			wp_enqueue_script( $products_handle, $products_source['url'], array(), null, true );
+		} elseif ( $products_source ) {
+			$products_handle = 'mirka-products-db';
+			wp_register_script( $products_handle, false, array(), MIRKA_THEME_VERSION, true );
+			wp_enqueue_script( $products_handle );
+			wp_add_inline_script( $products_handle, $products_source['js'] );
+		} else {
+			wp_enqueue_script( 'mirka-products-1', $theme_uri . '/assets/js/products-data.js', array(), MIRKA_THEME_VERSION, true );
+			// Toàn bộ ảnh sản phẩm đã được tải về và đặt trong assets/images/products/
+			// (không còn phụ thuộc / hotlink CDN img.mirka.com). products-data*.js ghép
+			// MIRKA_IMG_BASE với tên file ảnh cục bộ, nên biến này phải tồn tại TRƯỚC
+			// khi products-data.js chạy.
+			wp_add_inline_script(
+				'mirka-products-1',
+				'var MIRKA_IMG_BASE = ' . wp_json_encode( trailingslashit( $theme_uri . '/assets/images/products' ) ) . ';',
+				'before'
+			);
+			wp_enqueue_script( 'mirka-products-2', $theme_uri . '/assets/js/products-data-2.js', array( 'mirka-products-1' ), MIRKA_THEME_VERSION, true );
+			wp_enqueue_script( 'mirka-products-3', $theme_uri . '/assets/js/products-data-3.js', array( 'mirka-products-2' ), MIRKA_THEME_VERSION, true );
+			wp_enqueue_script( 'mirka-products-4', $theme_uri . '/assets/js/products-data-4.js', array( 'mirka-products-3' ), MIRKA_THEME_VERSION, true );
+			wp_enqueue_script( 'mirka-products-5', $theme_uri . '/assets/js/products-data-5.js', array( 'mirka-products-4' ), MIRKA_THEME_VERSION, true );
+			wp_enqueue_script( 'mirka-products-6', $theme_uri . '/assets/js/products-data-6.js', array( 'mirka-products-5' ), MIRKA_THEME_VERSION, true );
+			$products_handle = 'mirka-products-6';
+		}
+
+		wp_enqueue_script( 'mirka-script', $theme_uri . '/assets/js/script.js', array( $products_handle ), MIRKA_THEME_VERSION, true );
 		wp_add_inline_script( 'mirka-script', $product_base_js, 'before' );
 
 		if ( is_page_template( 'page-nganh-nghe.php' ) ) {
-			wp_enqueue_script( 'mirka-industries', $theme_uri . '/assets/js/industries.js', array( 'mirka-products-6' ), MIRKA_THEME_VERSION, true );
+			wp_enqueue_script( 'mirka-industries', $theme_uri . '/assets/js/industries.js', array( $products_handle ), MIRKA_THEME_VERSION, true );
 			wp_add_inline_script(
 				'mirka-industries',
 				"document.addEventListener('DOMContentLoaded', function () { renderIndustryProducts(" . wp_json_encode( get_post_field( 'post_name' ) ) . ", 'industryProductGrid', 8); });",
