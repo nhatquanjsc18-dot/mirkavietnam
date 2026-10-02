@@ -17,3 +17,7 @@ wp-theme-mirka-vn.zip
 # Logs
 *.log
 .claude/scheduled_tasks.lock
+
+# Bản sao lưu hosting (hPanel backup) — chứa dữ liệu nhiều domain khác nhau,
+# quá lớn và không thuộc source code của dự án này, không commit.
+Data wordpress mirka.nhatquan.vn/
