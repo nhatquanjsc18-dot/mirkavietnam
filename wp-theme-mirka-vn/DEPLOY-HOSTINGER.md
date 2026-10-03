@@ -14,6 +14,10 @@ Hướng dẫn này dành riêng cho bản **WordPress** (file `wp-theme-mirka-v
 
 1. Vào **wp-admin → Appearance → Themes → Add New Theme → Upload Theme**.
 2. Chọn file `wp-theme-mirka-vn.zip`, bấm **Install Now**, sau đó **Activate**.
+
+> **Nếu giải nén bằng File Manager của hPanel** thay vì Upload Theme: xoá thư mục `wp-content/themes/wp-theme-mirka-vn` cũ (nếu có, nhất là bản bị lỗi file phẳng tên có dấu `\`), rồi giải nén zip **ngay trong** `wp-content/themes/` — zip đã chứa sẵn thư mục gốc `wp-theme-mirka-vn/`. Sau khi giải nén phải thấy các thư mục `assets/` và `inc/`.
+>
+> Khi tự đóng gói lại theme trên Windows, dùng `tools\build-wp-zip.ps1` (không dùng Compress-Archive, vì nó ghi đường dẫn bằng `\` làm hỏng cấu trúc thư mục trên Linux).
 3. Theme tự động flush rewrite rules khi kích hoạt (xem `mirka_flush_rewrite_rules()` trong `functions.php`), nhưng nên vào **Settings → Permalinks**, chọn **Post name**, bấm **Save Changes** một lần nữa cho chắc.
 
 ## 3. Tạo 15 Trang (Pages) và gán đúng Template

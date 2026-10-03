@@ -11,7 +11,7 @@ npm-debug.log*
 .DS_Store
 Thumbs.db
 
-# Build artifacts (regenerate với: Compress-Archive -Path wp-theme-mirka-vn -DestinationPath wp-theme-mirka-vn.zip)
+# Build artifacts (regenerate với: powershell -File tools\build-wp-zip.ps1 — KHÔNG dùng Compress-Archive, ghi đường dẫn "\" làm hỏng zip trên Linux)
 wp-theme-mirka-vn.zip
 
 # Logs
