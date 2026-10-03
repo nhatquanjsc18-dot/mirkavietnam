@@ -72,9 +72,11 @@ function mirka_register_product_cpt() {
 				'not_found'          => 'Chưa có sản phẩm nào.',
 				'not_found_in_trash' => 'Không có sản phẩm trong thùng rác.',
 			),
-			// Không có URL riêng: trang sản phẩm do rewrite /mirka-{slug}/ + product-detail.js đảm nhiệm.
+			// Mỗi sản phẩm có URL /mirka/{slug}/ (để nút "Xem" trong wp-admin hoạt động) và URL này
+			// tự chuyển hướng 301 về trang chi tiết chính /mirka-{slug}/ (xem mirka_redirect_product_url).
+			// public=false giữ sản phẩm ra khỏi sitemap WordPress và kết quả tìm kiếm của site.
 			'public'              => false,
-			'publicly_queryable'  => false,
+			'publicly_queryable'  => true,
 			'exclude_from_search' => true,
 			'show_ui'             => true,
 			'show_in_menu'        => true,
@@ -83,12 +85,27 @@ function mirka_register_product_cpt() {
 			'menu_icon'           => 'dashicons-products',
 			'supports'            => array( 'title' ),
 			'has_archive'         => false,
-			'rewrite'             => false,
+			'rewrite'             => array( 'slug' => 'mirka', 'with_front' => false ),
 			'capability_type'     => 'post',
 		)
 	);
 }
 add_action( 'init', 'mirka_register_product_cpt' );
+
+/** /mirka/{slug}/ (nút "Xem" trong wp-admin) -> 301 về trang chi tiết chính /mirka-{slug}/. */
+function mirka_redirect_product_url() {
+	if ( ! is_singular( 'mirka_product' ) ) {
+		return;
+	}
+	$id   = get_queried_object_id();
+	$slug = (string) get_post_meta( $id, 'mp_slug', true );
+	if ( $slug === '' ) {
+		$slug = (string) get_post_field( 'post_name', $id );
+	}
+	wp_safe_redirect( mirka_product_url( $slug ), 301 );
+	exit;
+}
+add_action( 'template_redirect', 'mirka_redirect_product_url' );
 
 /* ------------------------------------------------------------------ */
 /* Chuyển đổi giữa mảng sản phẩm (JS) <-> post meta                    */

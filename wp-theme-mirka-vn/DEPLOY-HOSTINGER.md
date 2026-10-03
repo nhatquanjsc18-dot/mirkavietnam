@@ -56,6 +56,8 @@ Sản phẩm được quản lý ở menu **Sản phẩm Mirka** trong wp-admin 
 
 **Cách B (file import):** cài plugin **WordPress Importer** (Công cụ → Nhập → WordPress → Cài đặt ngay), rồi chọn file `mirka-products.xml` (thư mục `wordpress-import/` của dự án, hoặc file được gửi kèm) → Upload and import → chọn gán tác giả là tài khoản quản trị → Submit. **Phải kích hoạt theme trước** khi import, nếu không loại "Sản phẩm" chưa tồn tại và dữ liệu bị bỏ qua.
 
+Mỗi sản phẩm có link xem dạng `/mirka/{slug}/` (nút **Xem** trong wp-admin), link này tự chuyển hướng 301 sang trang chi tiết chính `/mirka-{slug}/`. Sản phẩm không nằm trong sitemap WordPress. **Sau khi cập nhật theme phải vào Settings → Permalinks bấm Save Changes một lần** để link xem hoạt động.
+
 Trong lúc chưa nạp, web vẫn hiển thị bộ sản phẩm đóng gói sẵn trong theme (không bị trống). Sau khi nạp, front-end tự đọc từ database và tự làm mới mỗi khi bạn thêm/sửa/xoá sản phẩm.
 
 Ảnh sản phẩm nhập ở ô *Ảnh sản phẩm* dạng `images/products/ten-file.jpg` (ảnh có sẵn trong theme) hoặc dán URL đầy đủ của ảnh tải lên Thư viện media.
