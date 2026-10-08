@@ -21,11 +21,12 @@ define( 'MIRKA_WEB3FORMS_ACCESS_KEY', '59b6b1c8-f026-4011-afea-a77acb1f09e8' );
 function mirka_google_analytics() {
 	?>
 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-N2BC37WDGF"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3N7VMY04NC"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
+  gtag('config', 'G-3N7VMY04NC');
   gtag('config', 'G-N2BC37WDGF');
 </script>
 	<?php
