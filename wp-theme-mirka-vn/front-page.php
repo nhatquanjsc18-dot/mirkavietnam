@@ -66,7 +66,7 @@ get_header();
     <div class="section-head-row">
       <div>
         <h2 class="page-title">Sản phẩm nổi bật</h2>
-        <p class="page-desc">Một số sản phẩm tiêu biểu trong hơn 95 sản phẩm thuộc 5 nhóm: Máy chà nhám điện, Máy chà nhám khí nén, Vật liệu mài, Đánh bóng, Phụ kiện &amp; Hút bụi. Dữ liệu &amp; hình ảnh gốc từ mirka.com.</p>
+        <p class="page-desc">Một số sản phẩm tiêu biểu trong hơn 95 sản phẩm thuộc 5 nhóm: Máy chà nhám điện, Máy chà nhám khí nén, Vật liệu mài, Đánh bóng, Phụ kiện. Dữ liệu &amp; hình ảnh gốc từ mirka.com.</p>
       </div>
       <a href="<?php echo mirka_url( 'san-pham.html' ); ?>" class="link-arrow">Xem tất cả sản phẩm →</a>
     </div>

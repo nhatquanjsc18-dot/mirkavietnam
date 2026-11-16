@@ -1,7 +1,7 @@
 // Danh mục mới: Robot & Tự động hóa (Robotics and Automation)
 // Nguồn: https://www.mirka.com/en/products/robotics-and-automation/ — 43 sản phẩm trên trang nguồn.
 // 42 sản phẩm được thêm mới ở đây; 1 sản phẩm (Backing Pad for AIROS Ø150mm)
-// đã tồn tại sẵn trong danh mục "Phụ kiện & Hút bụi" (products-data-5.js) nên
+// đã tồn tại sẵn trong danh mục "Phụ kiện" (products-data-5.js) nên
 // không nhân đôi — vẫn xem là đã phủ đủ 43/43 trên toàn catalogue.
 // Đặt cạnh "Máy chà nhám khí nén" trong điều hướng.
 

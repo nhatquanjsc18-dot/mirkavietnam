@@ -23,7 +23,7 @@ get_header();
       <button class="cat-tab" data-cat="mai">Vật liệu mài</button>
       <button class="cat-tab" data-cat="danhbong">Đánh bóng</button>
       <button class="cat-tab" data-cat="hutbui">Máy hút bụi</button>
-      <button class="cat-tab" data-cat="phukien">Phụ kiện &amp; Hút bụi</button>
+      <button class="cat-tab" data-cat="phukien">Phụ kiện</button>
     </div>
 
     <div class="search-box">

@@ -131,7 +131,7 @@ if ( is_front_page() ) {
               <a href="<?php echo mirka_product_url( 'fbs-b-10x330' ); ?>">FBS-B máy chà băng pin</a>
             </div>
             <div class="mega-col">
-              <h4><a href="<?php echo mirka_url( 'san-pham.html?cat=phukien' ); ?>">Phụ kiện &amp; Hút bụi</a></h4>
+              <h4><a href="<?php echo mirka_url( 'san-pham.html?cat=phukien' ); ?>">Phụ kiện</a></h4>
               <a href="<?php echo mirka_url( 'san-pham.html?cat=phukien&sub=de-lot' ); ?>">Đế lót (Backing Pad)</a>
               <a href="<?php echo mirka_url( 'san-pham.html?cat=phukien&sub=interface-lo' ); ?>">Interface có lỗ hút bụi</a>
               <a href="<?php echo mirka_url( 'san-pham.html?cat=phukien&sub=pad-saver' ); ?>">Miếng bảo vệ đế</a>
@@ -193,7 +193,7 @@ if ( is_front_page() ) {
         <a href="<?php echo mirka_url( 'san-pham.html?cat=mai' ); ?>">Vật liệu mài</a>
         <a href="<?php echo mirka_url( 'san-pham.html?cat=danhbong' ); ?>">Đánh bóng</a>
         <a href="<?php echo mirka_url( 'san-pham.html?cat=hutbui' ); ?>">Máy hút bụi</a>
-        <a href="<?php echo mirka_url( 'san-pham.html?cat=phukien' ); ?>">Phụ kiện &amp; Hút bụi</a>
+        <a href="<?php echo mirka_url( 'san-pham.html?cat=phukien' ); ?>">Phụ kiện</a>
       </div>
       <button class="accordion-item" data-target="acc2">
         <span>Kiến thức</span><span class="plus">+</span>

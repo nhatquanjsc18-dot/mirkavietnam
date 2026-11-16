@@ -69,7 +69,7 @@ get_header();
               <option value="mai">Vật liệu mài</option>
               <option value="danhbong">Đánh bóng</option>
               <option value="hutbui">Máy hút bụi</option>
-              <option value="phukien">Phụ kiện &amp; Hút bụi</option>
+              <option value="phukien">Phụ kiện</option>
               <option value="khac">Khác / Chưa rõ</option>
             </select>
           </div>

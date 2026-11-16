@@ -26,7 +26,7 @@ function mirka_product_categories() {
 		'mai'      => 'Vật liệu mài',
 		'danhbong' => 'Đánh bóng',
 		'hutbui'   => 'Máy hút bụi',
-		'phukien'  => 'Phụ kiện & Hút bụi',
+		'phukien'  => 'Phụ kiện',
 	);
 }
 
