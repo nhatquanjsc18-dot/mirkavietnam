@@ -1,8 +1,8 @@
 /*
-Theme Name: Mirka Việt Nam
+Theme Name: Mirka Viá»‡t Nam
 Theme URI: https://example.com
 Author: Nhat Quan JSC
-Description: Theme minh họa catalogue sản phẩm Mirka (chuyển đổi từ site tĩnh HTML sang WordPress). Dữ liệu và hình ảnh sản phẩm tham khảo từ mirka.com.
+Description: Theme minh há»a catalogue sáº£n pháº©m Mirka (chuyá»ƒn Ä‘á»•i tá»« site tÄ©nh HTML sang WordPress). Dá»¯ liá»‡u vÃ  hÃ¬nh áº£nh sáº£n pháº©m tham kháº£o tá»« mirka.com.
 Version: 1.0
 Requires at least: 5.9
 Requires PHP: 7.4
@@ -115,8 +115,9 @@ a{color:inherit;text-decoration:none;}
 .nav-item:hover .mega-menu,.nav-item:focus-within .mega-menu{display:block;}
 .mega-menu-grid{
   max-width:1240px;margin:0 auto;padding:0 24px;
-  display:grid;grid-template-columns:repeat(6,1fr);gap:24px;
+  display:grid;grid-template-columns:repeat(8,1fr);gap:18px;
 }
+@media(max-width:1180px){.mega-menu-grid{grid-template-columns:repeat(4,1fr);gap:22px 18px;}}
 .mega-col h4{
   font-size:0.78rem;text-transform:uppercase;letter-spacing:0.3px;
   color:var(--ink);font-weight:800;margin-bottom:12px;

@@ -122,6 +122,21 @@ if ( is_front_page() ) {
               <a href="<?php echo mirka_url( 'san-pham.html?cat=danhbong&sub=may-danh-bong' ); ?>">Máy đánh bóng điện</a>
               <a href="<?php echo mirka_url( 'san-pham.html?cat=danhbong&sub=polarshine' ); ?>">Hoá chất đánh bóng</a>
             </div>
+            <div class="mega-col">
+              <h4><a href="<?php echo mirka_url( 'san-pham.html' ); ?>">Sản phẩm mới</a></h4>
+              <a href="<?php echo mirka_product_url( 'deros-ii-650' ); ?>">DEROS II 650 EU</a>
+              <a href="<?php echo mirka_product_url( 'polaros-rp600' ); ?>">POLAROS RP 600 EU</a>
+              <a href="<?php echo mirka_product_url( 'dexos-1217' ); ?>">DEXOS 1217 M AFC</a>
+              <a href="<?php echo mirka_product_url( 'abranet-ace-hd-150' ); ?>">Abranet Ace HD Ø 150</a>
+              <a href="<?php echo mirka_product_url( 'fbs-b-10x330' ); ?>">FBS-B máy chà băng pin</a>
+            </div>
+            <div class="mega-col">
+              <h4><a href="<?php echo mirka_url( 'san-pham.html?cat=phukien' ); ?>">Phụ kiện &amp; Hút bụi</a></h4>
+              <a href="<?php echo mirka_url( 'san-pham.html?cat=phukien&sub=de-lot' ); ?>">Đế lót (Backing Pad)</a>
+              <a href="<?php echo mirka_url( 'san-pham.html?cat=phukien&sub=interface-lo' ); ?>">Interface có lỗ hút bụi</a>
+              <a href="<?php echo mirka_url( 'san-pham.html?cat=phukien&sub=pad-saver' ); ?>">Miếng bảo vệ đế</a>
+              <a href="<?php echo mirka_url( 'san-pham.html?cat=phukien&sub=vacuum-block' ); ?>">Đĩa chặn hút</a>
+            </div>
           </div>
         </div>
       </div>
